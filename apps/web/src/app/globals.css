@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "@personal-blog/design-system/theme.css";
+
+@layer utilities {
+  /* Texts Presets */
+  .text-preset-1 {
+    font: var(--text-preset-1);
+    letter-spacing: var(--tracking-1);
+  }
+  .text-preset-2 {
+    font: var(--text-preset-2);
+    letter-spacing: var(--tracking-2);
+  }
+  .text-preset-3 {
+    font: var(--text-preset-3);
+    letter-spacing: var(--tracking-2);
+  }
+  .text-preset-4 {
+    font: var(--text-preset-4);
+    letter-spacing: var(--tracking-2);
+  }
+  .text-preset-5 {
+    font: var(--text-preset-5);
+    letter-spacing: var(--tracking-2);
+  }
+  .text-preset-6 {
+    font: var(--text-preset-6);
+    letter-spacing: var(--tracking-2);
+  }
+  .text-preset-7 {
+    font: var(--text-preset-7);
+    letter-spacing: var(--tracking-3);
+  }
+  .text-preset-7-semibold {
+    font: var(--text-preset-7-semibold);
+    letter-spacing: var(--tracking-3);
+  }
+  .text-preset-8 {
+    font: var(--text-preset-8);
+    letter-spacing: var(--tracking-3);
+  }
+  .text-preset-8-italic {
+    font: var(--text-preset-8-italic);
+    letter-spacing: var(--tracking-3);
+  }
+  .text-preset-9 {
+    font: var(--text-preset-9);
+    letter-spacing: var(--tracking-4);
+  }
+}

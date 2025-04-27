@@ -1,0 +1,96 @@
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* Neutral Palette */
+  --color-system-neutral-900: #1c1a19;
+  --color-system-neutral-800: #201e1d;
+  --color-system-neutral-700: #34302d;
+  --color-system-neutral-600: #4a4846;
+  --color-system-neutral-400: #c0bfbf;
+  --color-system-neutral-300: #dedcda;
+  --color-system-neutral-200: #efedeb;
+  --color-system-neutral-100: #fbf9f7;
+  --color-system-neutral-0: #ffffff;
+
+  /* Blue Palette */
+  --color-system-blue-200: #e1f1fe;
+  --color-system-blue-500: #93cefc;
+  --color-system-blue-700: #75b0de;
+  --color-system-blue-800: #5792c0;
+  --color-system-blue-900: #022b4a;
+
+  /* Green Palette */
+  --color-system-green-200: #e9f5ea;
+  --color-system-green-500: #9dd3a9;
+  --color-system-green-700: #008531;
+  --color-system-green-900: #132a18;
+
+  /* Yellow Palette */
+  --color-system-yellow-200: #fff5e1;
+  --color-system-yellow-500: #facc79;
+  --color-system-yellow-700: #ea9806;
+  --color-system-yellow-900: #4a3003;
+
+  /* Red Palette */
+  --color-system-red-400: #f04438;
+  --color-system-red-600: #d92d20;
+
+  /* Spacing */
+  --spacing-0: 0rem; /* 0px */
+  --spacing-025: 0.125rem; /* 2px */
+  --spacing-050: 0.25rem; /* 4px */
+  --spacing-075: 0.375rem; /* 6px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-125: 0.625rem; /* 10px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-250: 1.25rem; /* 20px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-1000: 5rem; /* 80px */
+
+  /* Radius */
+  --radius-0: 0rem; /* 0px */
+  --radius-4: 0.25rem; /* 4px */
+  --radius-6: 0.375rem; /* 6px */
+  --radius-8: 0.5rem; /* 8px */
+  --radius-10: 0.625rem; /* 10px */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+  --radius-20: 1.25rem; /* 20px */
+  --radius-24: 1.5rem; /* 24px */
+
+  /* Text Presets */
+  --text-preset-1: 400 2.5rem/3.25rem "DM Sans", sans-serif; /* 40px/52px */
+  --text-preset-2: 400 2rem/2.6rem "DM Sans", sans-serif; /* 32px/41.6px */
+  --text-preset-3: 700 1.75rem/2.275rem "DM Sans", sans-serif; /* 28px/36.4px */
+  --text-preset-4: 600 1.5rem/1.95rem "DM Sans", sans-serif; /* 24px/31.2px */
+  --text-preset-5: 600 1.25rem/1.625rem "DM Sans", sans-serif; /* 20px/26px */
+  --text-preset-6: 500 1.125rem/1.6875rem "DM Sans", sans-serif; /* 18px/27px */
+  --text-preset-7: 400 1.125rem/1.6875rem "DM Sans", sans-serif; /* 18px/27px */
+  --text-preset-7-semibold: 600 1.125rem/1.6875rem "DM Sans", sans-serif;
+  --text-preset-8: 400 1rem/1.3rem "DM Sans", sans-serif; /* 16px/20.8px */
+  --text-preset-8-italic: 400 italic 1rem/1.3rem "DM Sans", sans-serif;
+  --text-preset-9: 400 1rem/1.46rem "Fira Code", monospace; /* 16px/23.36px */
+
+  /* Letter Spacing */
+  --tracking-1: -0.0625rem; /* -1px */
+  --tracking-2: -0.03125rem; /* -0.5px */
+  --tracking-3: -0.0125rem; /* -0.2px */
+  --tracking-4: -0.025rem; /* -0.4px */
+}
+
+@layer base {
+  :root {
+    /* Light theme variables can be added here */
+    --theme-color-background: var(--color-system-neutral-100);
+  }
+
+  [data-theme="dark"] {
+    /* Dark theme overrides can be added here */
+    --theme-color-background: var(--color-system-neutral-900);
+  }
+}
