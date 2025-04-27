@@ -18,7 +18,7 @@
     /* Light theme variables can be added here */
     --theme-color-background: var(--color-system-neutral-100);
 
-    --theme-color-border: var(--color-color-neutral-200);
+    --theme-color-border: var(--color-system-neutral-200);
 
     --theme-navbar-base: var(--color-system-neutral-0);
     --theme-navbar-border: var(--color-system-neutral-200);

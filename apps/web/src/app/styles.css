@@ -3,49 +3,103 @@
 @import "./theme.css";
 
 @layer utilities {
-  /* Texts Presets */
+  /* Preset 1 */
   .text-preset-1 {
-    font: var(--text-preset-1);
-    letter-spacing: var(--tracking-1);
+    font-size: var(--text-preset-1);
+    line-height: var(--text-preset-1--line-height);
+    letter-spacing: var(--text-preset-1--letter-spacing);
+    font-weight: var(--text-preset-1--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 2 */
   .text-preset-2 {
-    font: var(--text-preset-2);
-    letter-spacing: var(--tracking-2);
+    font-size: var(--text-preset-2);
+    line-height: var(--text-preset-2--line-height);
+    letter-spacing: var(--text-preset-2--letter-spacing);
+    font-weight: var(--text-preset-2--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 3 */
   .text-preset-3 {
-    font: var(--text-preset-3);
-    letter-spacing: var(--tracking-2);
+    font-size: var(--text-preset-3);
+    line-height: var(--text-preset-3--line-height);
+    letter-spacing: var(--text-preset-3--letter-spacing);
+    font-weight: var(--text-preset-3--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 4 */
   .text-preset-4 {
-    font: var(--text-preset-4);
-    letter-spacing: var(--tracking-2);
+    font-size: var(--text-preset-4);
+    line-height: var(--text-preset-4--line-height);
+    letter-spacing: var(--text-preset-4--letter-spacing);
+    font-weight: var(--text-preset-4--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 5 */
   .text-preset-5 {
-    font: var(--text-preset-5);
-    letter-spacing: var(--tracking-2);
+    font-size: var(--text-preset-5);
+    line-height: var(--text-preset-5--line-height);
+    letter-spacing: var(--text-preset-5--letter-spacing);
+    font-weight: var(--text-preset-5--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 6 */
   .text-preset-6 {
-    font: var(--text-preset-6);
-    letter-spacing: var(--tracking-2);
+    font-size: var(--text-preset-6);
+    line-height: var(--text-preset-6--line-height);
+    letter-spacing: var(--text-preset-6--letter-spacing);
+    font-weight: var(--text-preset-6--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 7 - Regular */
   .text-preset-7 {
-    font: var(--text-preset-7);
-    letter-spacing: var(--tracking-3);
+    font-size: var(--text-preset-7);
+    line-height: var(--text-preset-7--line-height);
+    letter-spacing: var(--text-preset-7--letter-spacing);
+    font-weight: var(--text-preset-7--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 7 - Semibold */
   .text-preset-7-semibold {
-    font: var(--text-preset-7-semibold);
-    letter-spacing: var(--tracking-3);
+    font-size: var(--text-preset-7-semibold);
+    line-height: var(--text-preset-7-semibold--line-height);
+    letter-spacing: var(--text-preset-7-semibold--letter-spacing);
+    font-weight: var(--text-preset-7-semibold--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 8 - Regular */
   .text-preset-8 {
-    font: var(--text-preset-8);
-    letter-spacing: var(--tracking-3);
+    font-size: var(--text-preset-8);
+    line-height: var(--text-preset-8--line-height);
+    letter-spacing: var(--text-preset-8--letter-spacing);
+    font-weight: var(--text-preset-8--font-weight);
+    font-family: "DM Sans", sans-serif;
   }
+
+  /* Preset 8 - Italic */
   .text-preset-8-italic {
-    font: var(--text-preset-8-italic);
-    letter-spacing: var(--tracking-3);
+    font-size: var(--text-preset-8-italic);
+    line-height: var(--text-preset-8-italic--line-height);
+    letter-spacing: var(--text-preset-8-italic--letter-spacing);
+    font-weight: var(--text-preset-8-italic--font-weight);
+    font-family: "DM Sans", sans-serif;
+    font-style: italic;
   }
+
+  /* Preset 9 - Fira Code */
   .text-preset-9 {
-    font: var(--text-preset-9);
-    letter-spacing: var(--tracking-4);
+    font-size: var(--text-preset-9);
+    line-height: var(--text-preset-9--line-height);
+    letter-spacing: var(--text-preset-9--letter-spacing);
+    font-weight: var(--text-preset-9--font-weight);
+    font-family: "Fira Code", monospace;
   }
 }

@@ -32,8 +32,8 @@ const Title = forwardRef<HTMLHeadingElement, TitleProps>((props, ref) => {
       ref={ref}
       className={cn(
         titleVariants({
-          size,
           variant,
+          size,
           className,
         })
       )}
