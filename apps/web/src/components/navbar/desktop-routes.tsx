@@ -6,6 +6,9 @@ import Link from "next/link";
 
 import { Text } from "@personal-blog/ui/text.tsx";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { FadeAnimate } from "../utilities/animation";
+import { Underline } from "../utilities/underline";
 
 interface DesktopRoutesProps {
   routes: SystemRouteType[];
@@ -19,13 +22,20 @@ export function DesktopRoutes(props: Readonly<DesktopRoutesProps>) {
   return (
     <ul className={cn("items-center gap-x-300 hidden md:flex", className)}>
       {routes.map((route) => {
+        const [isOver, setIsOver] = useState(false);
         const isActive = currentPathname.endsWith(route.path);
 
         return (
-          <li key={route.path} className="relative group">
-            <RouteLink route={route} active={isActive} />
-            {isActive && <ActiveBorder />}
-          </li>
+          <FadeAnimate key={route.path}>
+            <li
+              className="relative group"
+              onMouseEnter={() => setIsOver(true)}
+              onMouseLeave={() => setIsOver(false)}
+            >
+              <RouteLink route={route} active={isActive} />
+              {(isActive || isOver) && <ActiveBorder />}
+            </li>
+          </FadeAnimate>
         );
       })}
     </ul>
@@ -49,6 +59,21 @@ function RouteLink({ route, active }: Readonly<RouteLinkProps>) {
 
 function ActiveBorder() {
   return (
-    <div className="absolute -bottom-[0.75px] w-[105%] h-[3px] bg-navbar-link-active-bottom" />
+    <Underline
+      className="absolute -bottom-[0.75px]"
+      layoutId="navbar"
+      aria-hidden="true"
+      data-animation="slide"
+      style={{
+        width: "100%",
+      }}
+      transition={{
+        type: "spring",
+        bounce: 0.25,
+        stiffness: 100,
+        damping: 15,
+        duration: 0.3,
+      }}
+    />
   );
 }

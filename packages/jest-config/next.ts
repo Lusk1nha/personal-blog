@@ -12,6 +12,11 @@ const config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   moduleFileExtensions: [...baseConfig.moduleFileExtensions, "jsx", "tsx"],
+
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+  },
 } as const satisfies Config;
 
 export default createJestConfig(config);

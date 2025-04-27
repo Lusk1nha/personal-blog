@@ -24,7 +24,7 @@ export function MobileRoutes(props: Readonly<DesktopRoutesProps>) {
         return (
           <li
             key={route.path}
-            className="w-full min-h-7 relative group pb-075 last-of-type:pb-0 border-b border-navbar-link-active-mobile-border last-of-type:border-0"
+            className="w-full h-7 relative group pb-075 last-of-type:pb-0 border-b border-navbar-link-active-mobile-border last-of-type:border-0"
           >
             <RouteLink route={route} active={isActive} />
           </li>

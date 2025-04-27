@@ -63,7 +63,7 @@
 
   [data-theme="dark"] {
     /* Button Outline */
-    --theme-button-outline-base: var(--color-system-neutral-800);
+    --theme-button-outline-base: var(--color-system-neutral-900);
     --theme-button-outline-base-hover: var(--color-system-neutral-700);
     --theme-button-outline-border: var(--color-system-neutral-700);
     --theme-button-outline-border-hover: var(--color-system-neutral-600);

@@ -4,6 +4,7 @@ import { Button } from "@personal-blog/ui/button.tsx";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
+import { SpinAnimate } from "../utilities/animation";
 
 export function ThemeAction() {
   const { theme, setTheme, systemTheme } = useTheme();
@@ -24,8 +25,14 @@ export function ThemeAction() {
 
   return (
     <Button variant="outline" type="button" onClick={handleThemeChange}>
-      <Sun className="hidden h-5 w-5 dark:block" />
-      <Moon className="block h-5 w-5 dark:hidden" />
+      <SpinAnimate transition={{ duration: 0.6 }} className="block dark:hidden">
+        <Sun className="h-5 w-5" />
+      </SpinAnimate>
+
+      <SpinAnimate transition={{ duration: 0.6 }} className="hidden dark:block">
+        <Moon className="h-5 w-5" />
+      </SpinAnimate>
+
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
