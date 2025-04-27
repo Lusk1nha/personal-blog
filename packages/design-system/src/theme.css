@@ -81,16 +81,6 @@
   --tracking-2: -0.03125rem; /* -0.5px */
   --tracking-3: -0.0125rem; /* -0.2px */
   --tracking-4: -0.025rem; /* -0.4px */
-}
 
-@layer base {
-  :root {
-    /* Light theme variables can be added here */
-    --theme-color-background: var(--color-system-neutral-100);
-  }
-
-  [data-theme="dark"] {
-    /* Dark theme overrides can be added here */
-    --theme-color-background: var(--color-system-neutral-900);
-  }
+  --breakpoint-xs: 300px;
 }

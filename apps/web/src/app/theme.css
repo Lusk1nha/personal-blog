@@ -1,0 +1,32 @@
+@import "@personal-blog/design-system/theme.css";
+
+@theme {
+  --color-navbar-base: var(--theme-navbar-base);
+  --color-navbar-border: var(--theme-navbar-border);
+  --shadow-navbar: 0px 6px 10px 0px var(--theme-navbar-shadow);
+  --color-navbar-link-active-bottom: var(--theme-navbar-link-active-bottom);
+  --color-navbar-link-active-mobile-border: var(--theme-navbar-link-active-mobile-border);
+}
+
+@layer base {
+  :root {
+    /* Light theme variables can be added here */
+    --theme-color-background: var(--color-system-neutral-100);
+
+    --theme-navbar-base: var(--color-system-neutral-0);
+    --theme-navbar-border: var(--color-system-neutral-200);
+    --theme-navbar-shadow: #7b7b7b08; /* Not in the design system */
+    --theme-navbar-link-active-bottom: var(--color-system-blue-500);
+    --theme-navbar-link-active-mobile-border: var(--color-system-neutral-200);
+  }
+
+  [data-theme="dark"] {
+    /* Dark theme overrides can be added here */
+    --theme-color-background: var(--color-system-neutral-900);
+
+    --theme-navbar-base: var(--color-system-neutral-800);
+    --theme-navbar-border: var(--color-system-neutral-700);
+    --theme-navbar-link-active-bottom: var(--color-system-blue-700);
+    --theme-navbar-link-active-mobile-border: var(--color-system-neutral-700);
+  }
+}

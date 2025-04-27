@@ -1,12 +1,93 @@
 @import "@personal-blog/design-system/theme.css";
 
 @theme {
+  /* Button Outline */
+  --color-button-outline-base: var(--theme-button-outline-base);
+  --color-button-outline-base-hover: var(--theme-button-outline-base-hover);
+  --color-button-outline-border: var(--theme-button-outline-border);
+  --color-button-outline-border-hover: var(--theme-button-outline-border-hover);
+  --color-button-outline-text: var(--theme-button-outline-text);
+  --color-button-outline-text-hover: var(--theme-button-outline-text-hover);
+
+  /* Button Secondary */
+  --color-button-secondary-base: var(--theme-button-secondary-base);
+  --color-button-secondary-base-hover: var(--theme-button-secondary-base-hover);
+  --color-button-secondary-text: var(--theme-button-secondary-text);
+  --color-button-secondary-text-hover: var(--theme-button-secondary-text-hover);
+
+  /* Button Ghost */
+  --color-button-ghost-text: var(--theme-button-ghost-text);
+  --color-button-ghost-text-hover: var(--theme-button-ghost-text-hover);
+
+  /* Text Link */
+  --color-system-text-link: var(--theme-text-link);
+  --color-system-text-link-hover: var(--theme-text-link-hover);
+  --color-system-text-link-active: var(--theme-text-link-active);
+
+  /* Text BigLink */
+  --color-system-text-biglink: var(--theme-text-biglink);
+  --color-system-text-biglink-hover: var(--theme-text-biglink-hover);
+  --color-system-text-biglink-active: var(--theme-text-biglink-active);
 }
 
 @layer base {
   :root {
+    /* Button Outline */
+    --theme-button-outline-base: var(--color-system-neutral-100);
+    --theme-button-outline-base-hover: var(--color-system-neutral-200);
+    --theme-button-outline-border: var(--color-system-neutral-200);
+    --theme-button-outline-border-hover: var(--color-system-neutral-300);
+    --theme-button-outline-text: var(--color-system-neutral-900);
+    --theme-button-outline-text-hover: var(--color-system-neutral-900);
+
+    /* Button Secondary */
+    --theme-button-secondary-base: var(--color-system-neutral-700);
+    --theme-button-secondary-base-hover: var(--color-system-neutral-800);
+    --theme-button-secondary-text: var(--color-system-neutral-0);
+    --theme-button-secondary-text-hover: var(--color-system-neutral-100);
+
+    /* Button Ghost */
+    --theme-button-ghost-text: var(--color-system-neutral-700);
+    --theme-button-ghost-text-hover: var(--color-system-neutral-800);
+
+    /* Text Link */
+    --theme-text-link: var(--color-system-neutral-600);
+    --theme-text-link-hover: var(--color-system-neutral-700);
+    --theme-text-link-active: var(--color-system-neutral-700);
+
+    /* Text BigLink */
+    --theme-text-biglink: var(--color-system-neutral-600);
+    --theme-text-biglink-hover: var(--color-system-neutral-900);
+    --theme-text-biglink-active: var(--color-system-neutral-900);
   }
 
   [data-theme="dark"] {
+    /* Button Outline */
+    --theme-button-outline-base: var(--color-system-neutral-800);
+    --theme-button-outline-base-hover: var(--color-system-neutral-700);
+    --theme-button-outline-border: var(--color-system-neutral-700);
+    --theme-button-outline-border-hover: var(--color-system-neutral-600);
+    --theme-button-outline-text: var(--color-system-neutral-0);
+    --theme-button-outline-text-hover: var(--color-system-neutral-0);
+
+    /* Button Secondary */
+    --theme-button-secondary-base: var(--color-system-neutral-0);
+    --theme-button-secondary-base-hover: var(--color-system-neutral-100);
+    --theme-button-secondary-text: var(--color-system-neutral-900);
+    --theme-button-secondary-text-hover: var(--color-system-neutral-900);
+
+    /* Button Ghost */
+    --theme-button-ghost-text: var(--color-system-neutral-0);
+    --theme-button-ghost-text-hover: var(--color-system-neutral-100);
+
+    /* Text Link */
+    --theme-text-link: var(--color-system-neutral-400);
+    --theme-text-link-hover: var(--color-system-neutral-0);
+    --theme-text-link-active: var(--color-system-neutral-0);
+
+    /* Text BigLink */
+    --theme-text-biglink: var(--color-system-neutral-400);
+    --theme-text-biglink-hover: var(--color-system-neutral-0);
+    --theme-text-biglink-active: var(--color-system-neutral-0);
   }
 }

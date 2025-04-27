@@ -1,10 +1,11 @@
-import { APP_DESCRIPTION, APP_NAME } from "@/constants";
-import "./globals.css";
+import { APP_DESCRIPTION, APP_NAME } from "@/shared/constants";
+import "./styles.css";
 
 import "@personal-blog/design-system/styles.css";
 import "@personal-blog/ui/styles.css";
 
 import type { Metadata } from "next";
+import { SystemProviders } from "./_components/system-providers";
 
 export const metadata: Metadata = {
   title: APP_NAME,
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SystemProviders>{children}</SystemProviders>
+      </body>
     </html>
   );
 }

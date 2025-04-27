@@ -18,6 +18,11 @@ export function FontProvider(props: Readonly<FontProviderProps>) {
   const { children } = props;
 
   return (
-    <div className={`${dmSans.variable} ${firaCode.variable}`}>{children}</div>
+    <div
+      data-testid="font-provider"
+      className={`${firaCode.className} ${dmSans.className}`}
+    >
+      {children}
+    </div>
   );
 }

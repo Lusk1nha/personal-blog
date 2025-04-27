@@ -5,7 +5,7 @@ export default function RootTemplate(props: Readonly<NextArtefactProps>) {
   const { children } = props;
 
   return (
-    <div id="root-template-container" className="bg-background">
+    <div id="root-template-container" className="bg-background w-full h-screen">
       <FontProvider>{children}</FontProvider>
     </div>
   );
