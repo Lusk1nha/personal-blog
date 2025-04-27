@@ -36,8 +36,8 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
       ref={ref}
       className={cn(
         textVariants({
-          variant,
           size,
+          variant,
           className,
         })
       )}

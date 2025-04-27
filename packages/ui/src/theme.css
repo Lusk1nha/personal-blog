@@ -28,6 +28,9 @@
   --color-system-text-biglink: var(--theme-text-biglink);
   --color-system-text-biglink-hover: var(--theme-text-biglink-hover);
   --color-system-text-biglink-active: var(--theme-text-biglink-active);
+
+  /* Title default */
+  --color-system-title-default: var(--theme-system-title-default);
 }
 
 @layer base {
@@ -59,6 +62,9 @@
     --theme-text-biglink: var(--color-system-neutral-600);
     --theme-text-biglink-hover: var(--color-system-neutral-900);
     --theme-text-biglink-active: var(--color-system-neutral-900);
+
+    /* Title default */
+    --theme-system-title-default: var(--color-system-neutral-700);
   }
 
   [data-theme="dark"] {
@@ -89,5 +95,8 @@
     --theme-text-biglink: var(--color-system-neutral-400);
     --theme-text-biglink-hover: var(--color-system-neutral-0);
     --theme-text-biglink-active: var(--color-system-neutral-0);
+
+    /* Title default */
+    --theme-system-title-default: var(--color-system-neutral-0);
   }
 }

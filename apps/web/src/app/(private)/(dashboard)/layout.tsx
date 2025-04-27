@@ -7,7 +7,7 @@ export default function DashboardLayout(props: Readonly<NextArtefactProps>) {
   return (
     <div
       data-testid="dashboard-layout"
-      className="flex justify-center w-full h-screen px-8 lg:px-16 py-5"
+      className="flex justify-center w-full h-screen px-8 lg:px-16 pt-5"
     >
       <div className="w-full max-w-[640px] h-full flex flex-col">
         <Navbar />

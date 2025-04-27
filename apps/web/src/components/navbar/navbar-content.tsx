@@ -1,12 +1,11 @@
 "use client";
 
-import { Avatar } from "@personal-blog/ui/avatar.tsx";
 import { DesktopRoutes } from "./desktop-routes";
 import { SYSTEM_ROUTES } from "@/shared/constants";
-import { MenuAction } from "../actions/menu-action";
-import { ThemeAction } from "../actions/theme-action";
-import { FadeAnimate } from "../utilities/animation";
-import { UserAvatar } from "../user-avatar";
+import { MenuAction } from "@/components/actions/menu-action";
+import { ThemeAction } from "@/components/actions/theme-action";
+import { FadeAnimate } from "@/components/utilities/animation";
+import { UserAvatar } from "@/components/user-avatar";
 
 export function NavbarContent() {
   return (
