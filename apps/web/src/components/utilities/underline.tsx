@@ -8,7 +8,7 @@ export function Underline(props: Readonly<UnderlineProps>) {
 
   return (
     <motion.span
-      className={cn("w-[105%] h-[3px] bg-navbar-link-active-bottom", className)}
+      className={cn("w-full h-[3px] bg-underline-bottom/80", className)}
       {...rest}
     />
   );

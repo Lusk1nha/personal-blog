@@ -1,13 +1,11 @@
-import { Title } from "@personal-blog/ui/title.tsx";
+import { AboutMeHome } from "@/components/home/about-me";
+import { Separator } from "@personal-blog/ui/separator.tsx";
 
 export default function DashboardPage() {
   return (
-    <main className="h-full border-x border-border mx-1 sm:mx-2">
-      <div className="flex flex-col px-2.5 py-8 md:py-12 pb-4">
-        <section>
-          <Title>Hi, I’m Paulina 👋</Title>
-        </section>
-      </div>
-    </main>
+    <div className="flex flex-col px-2.5 py-8 md:py-12 pb-4 gap-y-300">
+      <AboutMeHome />
+      <Separator />
+    </div>
   );
 }

@@ -4,7 +4,7 @@
 
 @layer utilities {
   /* Preset 1 */
-  .text-preset-1 {
+  .system-preset-1 {
     font-size: var(--text-preset-1);
     line-height: var(--text-preset-1--line-height);
     letter-spacing: var(--text-preset-1--letter-spacing);
@@ -13,7 +13,7 @@
   }
 
   /* Preset 2 */
-  .text-preset-2 {
+  .system-preset-2 {
     font-size: var(--text-preset-2);
     line-height: var(--text-preset-2--line-height);
     letter-spacing: var(--text-preset-2--letter-spacing);
@@ -22,7 +22,7 @@
   }
 
   /* Preset 3 */
-  .text-preset-3 {
+  .system-preset-3 {
     font-size: var(--text-preset-3);
     line-height: var(--text-preset-3--line-height);
     letter-spacing: var(--text-preset-3--letter-spacing);
@@ -31,7 +31,7 @@
   }
 
   /* Preset 4 */
-  .text-preset-4 {
+  .system-preset-4 {
     font-size: var(--text-preset-4);
     line-height: var(--text-preset-4--line-height);
     letter-spacing: var(--text-preset-4--letter-spacing);
@@ -40,7 +40,7 @@
   }
 
   /* Preset 5 */
-  .text-preset-5 {
+  .system-preset-5 {
     font-size: var(--text-preset-5);
     line-height: var(--text-preset-5--line-height);
     letter-spacing: var(--text-preset-5--letter-spacing);
@@ -49,7 +49,7 @@
   }
 
   /* Preset 6 */
-  .text-preset-6 {
+  .system-preset-6 {
     font-size: var(--text-preset-6);
     line-height: var(--text-preset-6--line-height);
     letter-spacing: var(--text-preset-6--letter-spacing);
@@ -58,7 +58,7 @@
   }
 
   /* Preset 7 - Regular */
-  .text-preset-7 {
+  .system-preset-7 {
     font-size: var(--text-preset-7);
     line-height: var(--text-preset-7--line-height);
     letter-spacing: var(--text-preset-7--letter-spacing);
@@ -67,7 +67,7 @@
   }
 
   /* Preset 7 - Semibold */
-  .text-preset-7-semibold {
+  .system-preset-7-semibold {
     font-size: var(--text-preset-7-semibold);
     line-height: var(--text-preset-7-semibold--line-height);
     letter-spacing: var(--text-preset-7-semibold--letter-spacing);
@@ -76,7 +76,7 @@
   }
 
   /* Preset 8 - Regular */
-  .text-preset-8 {
+  .system-preset-8 {
     font-size: var(--text-preset-8);
     line-height: var(--text-preset-8--line-height);
     letter-spacing: var(--text-preset-8--letter-spacing);
@@ -85,7 +85,7 @@
   }
 
   /* Preset 8 - Italic */
-  .text-preset-8-italic {
+  .system-preset-8-italic {
     font-size: var(--text-preset-8-italic);
     line-height: var(--text-preset-8-italic--line-height);
     letter-spacing: var(--text-preset-8-italic--letter-spacing);
@@ -95,7 +95,7 @@
   }
 
   /* Preset 9 - Fira Code */
-  .text-preset-9 {
+  .system-preset-9 {
     font-size: var(--text-preset-9);
     line-height: var(--text-preset-9--line-height);
     letter-spacing: var(--text-preset-9--letter-spacing);

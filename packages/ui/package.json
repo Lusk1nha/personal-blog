@@ -26,7 +26,8 @@
     "./button.tsx": "./src/components/button.tsx",
     "./anchor.tsx": "./src/components/anchor.tsx",
     "./text.tsx": "./src/components/text.tsx",
-    "./title.tsx": "./src/components/title.tsx"
+    "./title.tsx": "./src/components/title.tsx",
+    "./separator.tsx": "./src/components/separator.tsx"
   },
   "devDependencies": {
     "@personal-blog/eslint-config": "workspace:*",

@@ -8,9 +8,11 @@ const buttonVariants = cva(
     variants: {
       size: {
         default: "min-h-10 min-w-10 rounded-8",
+        lg: "min-h-10 min-w-10 rounded-10",
       },
       variant: {
-        default: "",
+        default:
+          "bg-button-default-base hover:bg-button-default-base-hover text-button-default-text hover:text-button-default-text-hover border border-button-default-border hover:border-button-default-border-hover",
         ghost:
           "bg-transparent text-button-ghost-text hover:text-button-ghost-text-hover",
         secondary:

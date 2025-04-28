@@ -5,14 +5,14 @@ import { forwardRef } from "react";
 const textVariants = cva("antialiased", {
   variants: {
     variant: {
-      default: "",
+      default: "text-system-text-default",
       link: "cursor-pointer text-system-text-link hover:text-system-text-link-hover data-[state=active]:text-system-text-link-active",
       biglink:
         "cursor-pointer text-system-text-biglink hover:text-system-text-biglink-hover active:text-system-text-biglink-active data-[state=active]:text-system-text-biglink-active",
     },
     size: {
-      default: "text-preset-8",
-      lg: "text-preset-7",
+      default: "system-preset-8",
+      lg: "system-preset-7",
     },
   },
   defaultVariants: {

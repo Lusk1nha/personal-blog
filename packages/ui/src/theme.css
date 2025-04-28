@@ -1,6 +1,14 @@
 @import "@personal-blog/design-system/theme.css";
 
 @theme {
+  /* Button Default */
+  --color-button-default-base: var(--theme-button-default-base);
+  --color-button-default-base-hover: var(--theme-button-default-base-hover);
+  --color-button-default-border: var(--theme-button-default-border);
+  --color-button-default-border-hover: var(--theme-button-default-border-hover);
+  --color-button-default-text: var(--theme-button-default-text);
+  --color-button-default-text-hover: var(--theme-button-default-text-hover);
+
   /* Button Outline */
   --color-button-outline-base: var(--theme-button-outline-base);
   --color-button-outline-base-hover: var(--theme-button-outline-base-hover);
@@ -19,6 +27,9 @@
   --color-button-ghost-text: var(--theme-button-ghost-text);
   --color-button-ghost-text-hover: var(--theme-button-ghost-text-hover);
 
+  /* Text Default */
+  --color-system-text-default: var(--theme-text-default);
+
   /* Text Link */
   --color-system-text-link: var(--theme-text-link);
   --color-system-text-link-hover: var(--theme-text-link-hover);
@@ -31,10 +42,21 @@
 
   /* Title default */
   --color-system-title-default: var(--theme-system-title-default);
+
+  /* Separator default */
+  --color-system-separator-default: var(--theme-separator-default);
 }
 
 @layer base {
   :root {
+    /* Button Default */
+    --theme-button-default-base: var(--color-system-neutral-0);
+    --theme-button-default-base-hover: var(--color-system-neutral-100);
+    --theme-button-default-border: var(--color-system-neutral-200);
+    --theme-button-default-border-hover: var(--color-system-neutral-300);
+    --theme-button-default-text: var(--color-system-neutral-700);
+    --theme-button-default-text-hover: var(--color-system-neutral-900);
+
     /* Button Outline */
     --theme-button-outline-base: var(--color-system-neutral-100);
     --theme-button-outline-base-hover: var(--color-system-neutral-200);
@@ -53,6 +75,9 @@
     --theme-button-ghost-text: var(--color-system-neutral-700);
     --theme-button-ghost-text-hover: var(--color-system-neutral-800);
 
+    /* Text Default */
+    --theme-text-default: var(--color-system-neutral-600);
+
     /* Text Link */
     --theme-text-link: var(--color-system-neutral-600);
     --theme-text-link-hover: var(--color-system-neutral-700);
@@ -65,9 +90,20 @@
 
     /* Title default */
     --theme-system-title-default: var(--color-system-neutral-700);
+
+    /* Separator default */
+    --theme-separator-default: var(--color-system-neutral-200);
   }
 
   [data-theme="dark"] {
+    /* Button Default */
+    --theme-button-default-base: var(--color-system-neutral-800);
+    --theme-button-default-base-hover: var(--color-system-neutral-900);
+    --theme-button-default-border: var(--color-system-neutral-700);
+    --theme-button-default-border-hover: var(--color-system-neutral-700);
+    --theme-button-default-text: var(--color-system-neutral-0);
+    --theme-button-default-text-hover: var(--color-system-neutral-0);
+
     /* Button Outline */
     --theme-button-outline-base: var(--color-system-neutral-900);
     --theme-button-outline-base-hover: var(--color-system-neutral-700);
@@ -86,6 +122,9 @@
     --theme-button-ghost-text: var(--color-system-neutral-0);
     --theme-button-ghost-text-hover: var(--color-system-neutral-100);
 
+    /* Text Default */
+    --theme-text-default: var(--color-system-neutral-400);
+
     /* Text Link */
     --theme-text-link: var(--color-system-neutral-400);
     --theme-text-link-hover: var(--color-system-neutral-0);
@@ -98,5 +137,8 @@
 
     /* Title default */
     --theme-system-title-default: var(--color-system-neutral-0);
+
+    /* Separator default */
+    --theme-separator-default: var(--color-system-neutral-700);
   }
 }

@@ -113,7 +113,7 @@
 
   /* Text Preset 8 */
   --text-preset-8: 1rem; /* 16px */
-  --text-preset-8--line-height: 1.3rem; /* 130% */
+  --text-preset-8--line-height: 130%; /* 130% */
   --text-preset-8--letter-spacing: -0.0125rem; /* -0.2px */
   --text-preset-8--font-weight: 400; /* Regular */
 

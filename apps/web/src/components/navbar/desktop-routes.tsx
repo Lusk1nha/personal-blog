@@ -60,7 +60,7 @@ function RouteLink({ route, active }: Readonly<RouteLinkProps>) {
 function ActiveBorder() {
   return (
     <Underline
-      className="absolute -bottom-[0.75px]"
+      className="w-[105%] absolute -bottom-[0.75px]"
       layoutId="navbar"
       aria-hidden="true"
       data-animation="slide"
@@ -70,9 +70,9 @@ function ActiveBorder() {
       transition={{
         type: "spring",
         bounce: 0.25,
-        stiffness: 100,
-        damping: 15,
-        duration: 0.3,
+        stiffness: 60,
+        damping: 10,
+        duration: 0.2,
       }}
     />
   );

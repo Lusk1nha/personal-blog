@@ -11,7 +11,9 @@ export default function DashboardLayout(props: Readonly<NextArtefactProps>) {
     >
       <div className="w-full max-w-[640px] h-full flex flex-col">
         <Navbar />
-        {children}
+        <main className="h-full border-x border-border mx-1 sm:mx-2 overflow-x-hidden -mt-0.5">
+          {children}
+        </main>
       </div>
     </div>
   );
