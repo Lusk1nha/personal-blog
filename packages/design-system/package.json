@@ -10,7 +10,8 @@
   ],
   "exports": {
     "./styles.css": "./dist/styles.css",
-    "./theme.css": "./src/theme.css"
+    "./theme.css": "./src/theme.css",
+    "./icons": "./src/components/icons.tsx"
   },
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
@@ -23,8 +24,9 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@personal-blog/typescript-config": "workspace:*",
     "@personal-blog/eslint-config": "workspace:*",
+    "@personal-blog/typescript-config": "workspace:*",
+    "@types/react": "^19.1.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {

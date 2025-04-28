@@ -1,30 +1,21 @@
-"use client";
-
 import { DesktopRoutes } from "./desktop-routes";
 import { SYSTEM_ROUTES } from "@/shared/constants";
-import { MenuAction } from "@/components/actions/menu-action";
-import { ThemeAction } from "@/components/actions/theme-action";
-import { FadeAnimate } from "@/components/utilities/animation";
-import { UserAvatar } from "@/components/user-avatar";
+
+import { NavbarActions } from "./navbar-actions";
+import { GetUserAvatar } from "../user-avatar/get-user-avatar";
+import { Suspense } from "react";
+import { Skeleton } from "@personal-blog/ui/skeleton.tsx";
 
 export function NavbarContent() {
   return (
     <div className="flex items-center justify-between h-full gap-x-075">
-      <FadeAnimate>
-        <UserAvatar name="Paulina" imageUrl="/assets/images/image-avatar.jpg" />
-      </FadeAnimate>
+      <Suspense fallback={<Skeleton className="h-10 w-10 rounded-10" />}>
+        <GetUserAvatar />
+      </Suspense>
 
       <section className="flex items-center gap-x-250">
         <DesktopRoutes routes={SYSTEM_ROUTES} />
-
-        <div className="flex items-center gap-x-075">
-          {/* Mobile Menu */}
-          <div className="block md:hidden">
-            <MenuAction />
-          </div>
-
-          <ThemeAction />
-        </div>
+        <NavbarActions />
       </section>
     </div>
   );

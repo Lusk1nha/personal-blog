@@ -11,6 +11,7 @@ const textVariants = cva("antialiased", {
         "cursor-pointer text-system-text-biglink hover:text-system-text-biglink-hover active:text-system-text-biglink-active data-[state=active]:text-system-text-biglink-active",
     },
     size: {
+      italic: "system-preset-8-italic",
       default: "system-preset-8",
       lg: "system-preset-7",
     },

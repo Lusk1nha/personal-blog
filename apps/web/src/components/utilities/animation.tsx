@@ -1,11 +1,20 @@
 import { HTMLMotionProps, motion } from "motion/react";
 
-interface AnimateWrapperProps extends HTMLMotionProps<"span"> {
+interface SpanAnimateWrapperProps extends HTMLMotionProps<"span"> {
   children: React.ReactNode;
   className?: string;
 }
 
-export function FadeAnimate(props: Readonly<AnimateWrapperProps>) {
+interface ListAnimateWrapperProps extends HTMLMotionProps<"ul"> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const defaultAnimateProps: Omit<SpanAnimateWrapperProps, "children"> = {
+  transition: {},
+};
+
+export function FadeAnimate(props: Readonly<SpanAnimateWrapperProps>) {
   const { children, className, ...rest } = props;
   return (
     <motion.span
@@ -13,6 +22,7 @@ export function FadeAnimate(props: Readonly<AnimateWrapperProps>) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className={className}
+      {...defaultAnimateProps}
       {...rest}
     >
       {children}
@@ -20,8 +30,10 @@ export function FadeAnimate(props: Readonly<AnimateWrapperProps>) {
   );
 }
 
-interface SlideAnimateProps extends AnimateWrapperProps {
-  direction?: "left" | "right" | "up" | "down";
+export type SlideDirection = "left" | "right" | "up" | "down";
+
+interface SlideAnimateProps extends SpanAnimateWrapperProps {
+  direction?: SlideDirection;
 }
 
 export function SlideAnimate(props: Readonly<SlideAnimateProps>) {
@@ -36,6 +48,7 @@ export function SlideAnimate(props: Readonly<SlideAnimateProps>) {
       }}
       animate={{ x: 0, y: 0, opacity: 1 }}
       className={className}
+      {...defaultAnimateProps}
       {...rest}
     >
       {children}
@@ -43,7 +56,7 @@ export function SlideAnimate(props: Readonly<SlideAnimateProps>) {
   );
 }
 
-export function SpinAnimate(props: Readonly<AnimateWrapperProps>) {
+export function SpinAnimate(props: Readonly<SpanAnimateWrapperProps>) {
   const { children, className, ...rest } = props;
   return (
     <motion.span
@@ -51,9 +64,53 @@ export function SpinAnimate(props: Readonly<AnimateWrapperProps>) {
       initial={{ rotate: 0, opacity: 0 }}
       animate={{ rotate: 360, opacity: 1 }}
       className={className}
+      {...defaultAnimateProps}
       {...rest}
     >
       {children}
     </motion.span>
+  );
+}
+
+export function ListFadeInAnimate(props: Readonly<ListAnimateWrapperProps>) {
+  const { children, className, ...rest } = props;
+  return (
+    <motion.ul
+      data-animation="list-fade-in"
+      variants={{
+        visible: {
+          transition: {
+            delayChildren: 0.2,
+            staggerChildren: 0.05,
+          },
+        },
+      }}
+      initial="hidden"
+      animate="visible"
+      className={className}
+      {...rest}
+    >
+      {children}
+    </motion.ul>
+  );
+}
+
+export function ItemFadeInAnimate(props: Readonly<HTMLMotionProps<"li">>) {
+  const { children, ...rest } = props;
+  return (
+    <motion.li
+      data-animation="list-fade-in-item"
+      variants={{
+        hidden: {
+          opacity: 0,
+        },
+        visible: {
+          opacity: 1,
+        },
+      }}
+      {...rest}
+    >
+      {children}
+    </motion.li>
   );
 }

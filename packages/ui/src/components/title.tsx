@@ -8,6 +8,8 @@ const titleVariants = cva("antialiased", {
       default: "text-system-title-default",
     },
     size: {
+      xs: "system-preset-6",
+      sm: "system-preset-5",
       default: "system-preset-2",
     },
   },

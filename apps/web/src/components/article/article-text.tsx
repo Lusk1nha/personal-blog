@@ -11,7 +11,7 @@ export function ArticleText(props: Readonly<ArticleTextProps>) {
   const { children } = props;
   return (
     <FadeAnimate>
-      <Text size="lg">{children}</Text>
+      <Text className="whitespace-break-spaces" size="lg">{children}</Text>
     </FadeAnimate>
   );
 }

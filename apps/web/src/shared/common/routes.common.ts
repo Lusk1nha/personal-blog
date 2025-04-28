@@ -3,6 +3,8 @@ export enum SystemRoutesEnum {
   ABOUT = "/about",
   BLOG = "/blog",
   NEWSLETTER = "/newsletter",
+
+  ARTICLE = "/article/:slug",
 }
 
 export type SystemRouteType = {

@@ -45,6 +45,10 @@
 
   /* Separator default */
   --color-system-separator-default: var(--theme-separator-default);
+
+  /* Skeleton default */
+  --color-skeleton-default: var(--theme-skeleton-default);
+  --color-skeleton-default-hover: var(--theme-skeleton-default-hover);
 }
 
 @layer base {
@@ -93,6 +97,10 @@
 
     /* Separator default */
     --theme-separator-default: var(--color-system-neutral-200);
+
+    /* Skeleton default */
+    --theme-skeleton-default: var(--color-system-neutral-700);
+    --theme-skeleton-default-hover: var(--color-system-neutral-800);
   }
 
   [data-theme="dark"] {
@@ -140,5 +148,9 @@
 
     /* Separator default */
     --theme-separator-default: var(--color-system-neutral-700);
+
+    /* Skeleton default */
+    --theme-skeleton-default: var(--color-system-neutral-400);
+    --theme-skeleton-default-hover: var(--color-system-neutral-300);
   }
 }
