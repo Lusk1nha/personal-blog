@@ -4,10 +4,11 @@ import { LatestArticles } from "./_components/latest-articles/latest-articles";
 import { Suspense } from "react";
 import { AboutMeHomeSkeleton } from "./_components/about-me-home/about-me-home-skeleton";
 import { LatestArticlesSkeleton } from "./_components/latest-articles/latest-articles-skeleton";
+import { MadeWith } from "./_components/made-with/made-with";
 
 export default function DashboardPage() {
   return (
-    <div className="flex flex-col px-2.5 py-8 md:py-12 pb-4 gap-y-400">
+    <div className="flex flex-col px-2.5 py-8 md:pt-12 pb-4 gap-y-400">
       <Suspense fallback={<AboutMeHomeSkeleton />}>
         <AboutMeHome />
       </Suspense>
@@ -17,6 +18,10 @@ export default function DashboardPage() {
       <Suspense fallback={<LatestArticlesSkeleton />}>
         <LatestArticles />
       </Suspense>
+
+      <Separator />
+
+      <MadeWith />
     </div>
   );
 }

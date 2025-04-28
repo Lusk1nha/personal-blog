@@ -7,7 +7,7 @@ export function AboutMeHomeSkeleton() {
     <ArticleContent>
       <Skeleton className="w-1/2 h-10" />
 
-      <Skeleton className="h-[120px] w-full" />
+      <Skeleton className="h-[140px] w-full" />
       <Skeleton className="h-[80px] w-full" />
 
       <div className="flex gap-x-150 flex-wrap items-center">

@@ -7,6 +7,7 @@ const buttonVariants = cva(
   {
     variants: {
       size: {
+        fit: "h-fit w-fit",
         default: "min-h-10 min-w-10 rounded-8",
         lg: "min-h-10 min-w-10 rounded-10",
       },

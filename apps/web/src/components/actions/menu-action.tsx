@@ -14,6 +14,7 @@ export function MenuAction() {
       type="button"
       variant={isOpen ? "secondary" : "ghost"}
       onClick={toggleMenu}
+      title="Toggle navigation"
     >
       <Menu className={cn("block h-5 w-5", isOpen && "hidden")} />
       <X className={cn("hidden h-5 w-5", isOpen && "block")} />

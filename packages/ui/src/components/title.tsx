@@ -27,7 +27,7 @@ export interface TitleProps
 }
 
 const Title = forwardRef<HTMLHeadingElement, TitleProps>((props, ref) => {
-  const { size, className, variant, active, ...rest } = props;
+  const { size, className, variant, active, children, title, ...rest } = props;
 
   return (
     <h1
@@ -40,8 +40,12 @@ const Title = forwardRef<HTMLHeadingElement, TitleProps>((props, ref) => {
         })
       )}
       data-state={active ? "active" : undefined}
+      title={title ? title : children ? children.toString() : undefined}
+      {...(title ? { "aria-label": title } : {})}
       {...rest}
-    />
+    >
+      {children}
+    </h1>
   );
 });
 

@@ -1,4 +1,5 @@
 import { SystemRoutesEnum, SystemRouteType } from "./common/routes.common";
+import { SocialMediaData } from "./entities/social-media.entity";
 
 export const APP_NAME = "Personal Blog" as const satisfies string;
 export const APP_DESCRIPTION = "A personal blog";
@@ -24,5 +25,24 @@ export const SYSTEM_ROUTES: SystemRouteType[] = [
     name: "Newsletter",
     description: "The newsletter page of the blog.",
     path: SystemRoutesEnum.NEWSLETTER,
+  },
+];
+
+export const SYSTEM_NETWORKS: SocialMediaData[] = [
+  {
+    name: "twitter",
+    url: "https://twitter.com",
+  },
+  {
+    name: "github",
+    url: "https://github.com/lusk1nha",
+  },
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/olucaspedro",
+  },
+  {
+    name: "frontendmentor",
+    url: "https://www.frontendmentor.io/profile/Lusk1nha",
   },
 ];

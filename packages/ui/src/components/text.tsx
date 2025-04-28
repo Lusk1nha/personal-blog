@@ -30,7 +30,7 @@ export interface TextProps
 }
 
 const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
-  const { size, className, variant, active, ...rest } = props;
+  const { size, className, variant, active, title, children, ...rest } = props;
 
   return (
     <p
@@ -43,8 +43,12 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
         })
       )}
       data-state={active ? "active" : undefined}
+      title={title ? title : children ? children.toString() : undefined}
+      {...(title ? { "aria-label": title } : {})}
       {...rest}
-    />
+    >
+      {children}
+    </p>
   );
 });
 

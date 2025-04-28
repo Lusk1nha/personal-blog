@@ -24,7 +24,12 @@ export function ThemeAction() {
   }, [theme, setTheme]);
 
   return (
-    <Button variant="outline" type="button" onClick={handleThemeChange}>
+    <Button
+      type="button"
+      variant="outline"
+      onClick={handleThemeChange}
+      title="Toggle theme"
+    >
       <SpinAnimate transition={{ duration: 0.6 }} className="block dark:hidden">
         <Sun className="h-5 w-5" />
       </SpinAnimate>

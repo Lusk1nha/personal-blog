@@ -17,7 +17,7 @@ export function AboutMeHomeContent(props: Readonly<AboutMeHomeContentProps>) {
 
   return (
     <React.Fragment>
-      <ArticleHeaderTitle>{aboutMe.title}</ArticleHeaderTitle>
+      <ArticleHeaderTitle className="w-44 sm:w-fit" direction="up">{aboutMe.title}</ArticleHeaderTitle>
 
       <ArticleText>{aboutMe.description}</ArticleText>
 

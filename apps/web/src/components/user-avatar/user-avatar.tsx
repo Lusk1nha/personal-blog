@@ -19,6 +19,7 @@ export function UserAvatar(props: Readonly<UserAvatarProps>) {
         size="default"
         src={imageUrl}
         alt={name}
+        title={name}
       />
     </FadeAnimate>
   );

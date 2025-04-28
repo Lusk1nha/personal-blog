@@ -2,18 +2,29 @@
 
 import { Underline } from "@/components/utilities/underline";
 import { Title } from "@personal-blog/ui/title.tsx";
-import { SlideAnimate } from "../utilities/animation";
+import { SlideAnimate, SlideDirection } from "../utilities/animation";
 import { cn } from "@personal-blog/utils/cn";
 
 interface ArticleHeaderTitleProps {
   children: string;
+
+  className?: string;
   variant?: "default" | "right";
+  direction?: SlideDirection;
 }
 
 export function ArticleHeaderTitle(props: Readonly<ArticleHeaderTitleProps>) {
-  const { children, variant = "default" } = props;
+  const {
+    children,
+    className,
+    variant = "default",
+    direction = "left",
+  } = props;
   return (
-    <SlideAnimate className="w-fit flex relative">
+    <SlideAnimate
+      className={cn("w-fit flex relative", className)}
+      direction={direction}
+    >
       <Title className="z-20">{children}</Title>
       <Underline
         className={cn(
