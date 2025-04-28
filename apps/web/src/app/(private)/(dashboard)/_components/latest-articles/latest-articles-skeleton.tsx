@@ -1,3 +1,5 @@
+"use client";
+
 import { ArticleHeaderTitle } from "@/components/article/article-header-title";
 import { generateArrayByLength } from "@/shared/helpers/array.helper";
 import { Skeleton } from "@personal-blog/ui/skeleton.tsx";

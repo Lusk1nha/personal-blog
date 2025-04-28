@@ -28,7 +28,8 @@
     "./text.tsx": "./src/components/text.tsx",
     "./title.tsx": "./src/components/title.tsx",
     "./separator.tsx": "./src/components/separator.tsx",
-    "./skeleton.tsx": "./src/components/skeleton.tsx"
+    "./skeleton.tsx": "./src/components/skeleton.tsx",
+    "./spinner.tsx": "./src/components/spinner.tsx"
   },
   "devDependencies": {
     "@personal-blog/eslint-config": "workspace:*",
@@ -44,6 +45,7 @@
     "@tailwindcss/cli": "^4.1.4",
     "@tailwindcss/postcss": "^4.1.4",
     "class-variance-authority": "^0.7.1",
+    "lucide-react": "^0.503.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.4"
   }

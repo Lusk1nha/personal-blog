@@ -2,15 +2,15 @@
 
 import {
   FadeAnimate,
-  ItemFadeInAnimate,
   ListFadeInAnimate,
 } from "@/components/utilities/animation";
 
 import { SYSTEM_NETWORKS } from "@/shared/constants";
 import { SocialMediaEntity } from "@/shared/entities/social-media.entity";
-import { buttonVariants } from "@personal-blog/ui/button.tsx";
+
 import { Text } from "@personal-blog/ui/text.tsx";
-import Link from "next/link";
+
+import { MadeWithNetwork } from "./made-with-network";
 
 export function MadeWith() {
   const socialMedias = SYSTEM_NETWORKS.map(
@@ -29,31 +29,5 @@ export function MadeWith() {
         ))}
       </ListFadeInAnimate>
     </div>
-  );
-}
-
-interface MadeWithNetworkProps {
-  network: SocialMediaEntity;
-}
-
-function MadeWithNetwork(props: Readonly<MadeWithNetworkProps>) {
-  const { network } = props;
-
-  return (
-    <>
-      <ItemFadeInAnimate key={network.name}>
-        <Link
-          className={buttonVariants({
-            size: "fit",
-            variant: "ghost",
-          })}
-          href={network.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <network.icon className="h-4 w-4" />
-        </Link>
-      </ItemFadeInAnimate>
-    </>
   );
 }

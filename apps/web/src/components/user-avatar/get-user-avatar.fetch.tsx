@@ -1,9 +1,9 @@
 import { getApiRequest } from "@/shared/common/request.common";
 
-export async function getUserAvatar(): Promise<string> {
-  const endpoint = getApiRequest("/api/user/me/avatar");
+export async function getUserAvatar(endpoint: string): Promise<string> {
+  const requestUrl = getApiRequest(endpoint);
 
-  const response = await fetch(endpoint, {
+  const response = await fetch(requestUrl, {
     method: "GET",
   });
 
