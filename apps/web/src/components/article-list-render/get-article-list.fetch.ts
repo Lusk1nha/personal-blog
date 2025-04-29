@@ -1,12 +1,9 @@
-import { getApiRequest } from "@/shared/common/request.common";
 import { ArticleData } from "@/shared/entities/article.entity";
 
 export async function getLatestArticles(
   endpoint: string
 ): Promise<ArticleData[]> {
-  const requestUrl = getApiRequest(endpoint);
-
-  const response = await fetch(requestUrl, {
+  const response = await fetch(endpoint, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
