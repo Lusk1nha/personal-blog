@@ -49,6 +49,11 @@
   /* Skeleton default */
   --color-skeleton-default: var(--theme-skeleton-default);
   --color-skeleton-default-hover: var(--theme-skeleton-default-hover);
+
+  /* Error Wrapper default */
+  --color-error-wrapper-default: var(--theme-error-wrapper-default);
+  --color-error-wrapper-border: var(--theme-error-wrapper-border);
+  --color-error-wrapper-text: var(--theme-error-wrapper-text);
 }
 
 @layer base {
@@ -101,6 +106,11 @@
     /* Skeleton default */
     --theme-skeleton-default: var(--color-system-neutral-700);
     --theme-skeleton-default-hover: var(--color-system-neutral-800);
+
+    /* Error Wrapper default */
+    --theme-error-wrapper-default: var(--color-system-red-600);
+    --theme-error-wrapper-border: var(--color-system-red-600);
+    --theme-error-wrapper-text: var(--color-system-neutral-0);
   }
 
   [data-theme="dark"] {
@@ -152,5 +162,10 @@
     /* Skeleton default */
     --theme-skeleton-default: var(--color-system-neutral-400);
     --theme-skeleton-default-hover: var(--color-system-neutral-300);
+
+    /* Error Wrapper default */
+    --theme-error-wrapper-default: var(--color-system-red-600);
+    --theme-error-wrapper-border: var(--color-system-red-600);
+    --theme-error-wrapper-text: var(--color-system-neutral-0);
   }
 }

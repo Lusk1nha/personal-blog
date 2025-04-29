@@ -1,17 +1,19 @@
 "use client";
 
 import { SystemRoutesEnum } from "@/shared/common/routes.common";
-import { ArticleEntity } from "@/shared/entities/article.entity";
+import { ArticleData, ArticleEntity } from "@/shared/entities/article.entity";
 import { Text } from "@personal-blog/ui/text.tsx";
 import { Title } from "@personal-blog/ui/title.tsx";
 import Link from "next/link";
 
 interface ArticleListItemProps {
-  article: ArticleEntity;
+  data: ArticleData;
 }
 
 export function ArticleListItem(props: Readonly<ArticleListItemProps>) {
-  const { article } = props;
+  const { data } = props;
+
+  const article = new ArticleEntity(data);
 
   const path = SystemRoutesEnum.ARTICLE.replace(":slug", article.slug);
 

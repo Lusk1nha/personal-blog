@@ -1,4 +1,3 @@
-import { delayMs } from "@/shared/common/mock.common";
 import { getApiRequest } from "@/shared/common/request.common";
 
 export async function GET(): Promise<Response> {
@@ -21,8 +20,6 @@ export async function GET(): Promise<Response> {
   );
 
   const imageUrl = `data:image/jpeg;base64,${base64String}`;
-
-  await delayMs(1000); // Simulate a delay of 1 second
 
   return new Response(imageUrl, {
     status: 200,

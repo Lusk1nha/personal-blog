@@ -9,6 +9,8 @@ import { Button } from "@personal-blog/ui/button.tsx";
 import { Title } from "@personal-blog/ui/title.tsx";
 
 import { ListFadeInAnimate, ItemFadeInAnimate } from "../utilities/animation";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorComponent } from "../errors/error-component";
 
 interface ArticleListRenderProps {
   articles: ArticleData[];
@@ -39,9 +41,14 @@ export function ArticleListRender(props: Readonly<ArticleListRenderProps>) {
     <ListFadeInAnimate className="flex flex-col gap-y-300">
       {articlesToShow.map((article) => {
         return (
-          <ItemFadeInAnimate key={article.slug}>
-            <ArticleListItem article={new ArticleEntity(article)} />
-          </ItemFadeInAnimate>
+          <ErrorBoundary
+            fallback={<ErrorComponent title="Error loading article" />}
+            key={article.slug}
+          >
+            <ItemFadeInAnimate key={article.slug}>
+              <ArticleListItem data={article} />
+            </ItemFadeInAnimate>
+          </ErrorBoundary>
         );
       })}
 

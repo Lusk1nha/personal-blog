@@ -1,6 +1,6 @@
 import { AboutMeHome } from "./_components/about-me-home/about-me-home";
 import { Separator } from "@personal-blog/ui/separator.tsx";
-import { LatestArticles } from "./_components/latest-articles/latest-articles";
+import { LatestArticles } from "./_components/latest-articles";
 
 import { MadeWith } from "./_components/made-with/made-with";
 

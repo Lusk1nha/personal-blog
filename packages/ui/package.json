@@ -29,7 +29,8 @@
     "./title.tsx": "./src/components/title.tsx",
     "./separator.tsx": "./src/components/separator.tsx",
     "./skeleton.tsx": "./src/components/skeleton.tsx",
-    "./spinner.tsx": "./src/components/spinner.tsx"
+    "./spinner.tsx": "./src/components/spinner.tsx",
+    "./error-wrapper.tsx": "./src/components/error-wrapper.tsx"
   },
   "devDependencies": {
     "@personal-blog/eslint-config": "workspace:*",
