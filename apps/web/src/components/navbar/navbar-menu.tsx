@@ -13,8 +13,8 @@ export function NavbarMenu() {
   }
 
   return (
-    <FadeAnimate className="md:hidden">
-      <div className="w-full absolute top-18 z-10 left-0">
+    <FadeAnimate className="md:hidden z-100">
+      <div className="w-full absolute top-18 z-100 left-0">
         <section className="bg-navbar-base border border-navbar-border shadow-navbar w-full min-h-10 rounded-10 p-150">
           <MobileRoutes routes={SYSTEM_ROUTES} />
         </section>

@@ -14,12 +14,19 @@ import { ErrorComponent } from "../errors/error-component";
 
 interface ArticleListRenderProps {
   articles: ArticleData[];
+
+  mustShowDescription?: boolean;
+  mustShowMore?: boolean;
 }
 
 export function ArticleListRender(props: Readonly<ArticleListRenderProps>) {
-  const { articles } = props;
+  const {
+    articles,
+    mustShowDescription,
+    mustShowMore: hasShowMore = true,
+  } = props;
 
-  const [mustShowMore, setMustShowMore] = useState(false);
+  const [mustShowMore, setMustShowMore] = useState(!hasShowMore ? true : false);
 
   const articlesToShow = useMemo(() => {
     if (articles.length <= APP_ARTICLES_TO_SHOW) {
@@ -46,13 +53,17 @@ export function ArticleListRender(props: Readonly<ArticleListRenderProps>) {
             key={article.slug}
           >
             <ItemFadeInAnimate key={article.slug}>
-              <ArticleListItem data={article} />
+              <ArticleListItem
+                data={article}
+                mustShowDescription={mustShowDescription}
+              />
             </ItemFadeInAnimate>
           </ErrorBoundary>
         );
       })}
 
-      {articles.length >= APP_ARTICLES_TO_SHOW &&
+      {hasShowMore &&
+        articles.length >= APP_ARTICLES_TO_SHOW &&
         articlesToShow.length < articles.length && (
           <li>
             <Button

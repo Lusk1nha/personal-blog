@@ -2,20 +2,27 @@
 
 import useSWR from "swr";
 import { ErrorComponent } from "../errors/error-component";
-import { getLatestArticles } from "./get-article-list.fetch";
+import { getUserArticles } from "./get-article-list.fetch";
 import { ArticlesListSkeleton } from "./article-list-skeleton";
 import { ArticleListRender } from "./article-list-render";
 
+interface GetArticleListProps {
+  mustGetAllArticles?: boolean;
+  mustShowDescription?: boolean;
+}
+
 const REQUEST_URL = "/api/articles/latest";
 
-export function GetArticleList() {
+export function GetArticleList(props: Readonly<GetArticleListProps>) {
+  const { mustGetAllArticles, mustShowDescription } = props;
+
   const {
     data: articles,
     error,
     isLoading,
-  } = useSWR(REQUEST_URL, () => getLatestArticles(REQUEST_URL), {
-    fallbackData: [],
-  });
+  } = useSWR(REQUEST_URL, () =>
+    getUserArticles(REQUEST_URL, mustGetAllArticles)
+  );
 
   if (error)
     return (
@@ -26,5 +33,11 @@ export function GetArticleList() {
     );
   if (isLoading || !articles) return <ArticlesListSkeleton />;
 
-  return <ArticleListRender articles={articles} />;
+  return (
+    <ArticleListRender
+      articles={articles}
+      mustShowDescription
+      mustShowMore={false}
+    />
+  );
 }

@@ -8,10 +8,11 @@ import Link from "next/link";
 
 interface ArticleListItemProps {
   data: ArticleData;
+  mustShowDescription?: boolean;
 }
 
 export function ArticleListItem(props: Readonly<ArticleListItemProps>) {
-  const { data } = props;
+  const { data, mustShowDescription } = props;
 
   const article = new ArticleEntity(data);
 
@@ -34,6 +35,10 @@ export function ArticleListItem(props: Readonly<ArticleListItemProps>) {
           day: "numeric",
         })}
       </Text>
+
+      {mustShowDescription && article?.description && (
+        <Text size="lg">{article.description}</Text>
+      )}
     </div>
   );
 }

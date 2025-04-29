@@ -20,12 +20,13 @@ export function ArticleHeaderTitle(props: Readonly<ArticleHeaderTitleProps>) {
     variant = "default",
     direction = "left",
   } = props;
+
   return (
     <SlideAnimate
       className={cn("w-fit flex relative", className)}
       direction={direction}
     >
-      <Title className="z-20">{children}</Title>
+      <Title>{children}</Title>
       <Underline
         className={cn(
           " z-0 absolute",

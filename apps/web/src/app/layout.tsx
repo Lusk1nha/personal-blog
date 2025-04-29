@@ -19,6 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/assets/images/favicon-32x32.png"
+        />
+      </head>
       <body>
         <SystemProviders>{children}</SystemProviders>
       </body>
