@@ -1,7 +1,11 @@
 import { getApiRequest } from "@/shared/common/request.common";
+import { APP_ENVIRONMENT } from "@/shared/constants";
 
 export async function GET(): Promise<Response> {
-  const endpoint = getApiRequest("/assets/images/image-avatar.jpg");
+  const endpoint =
+    APP_ENVIRONMENT === "development"
+      ? getApiRequest("/assets/images/image-avatar.jpg")
+      : "/assets/images/image-avatar.jpg";
 
   const response = await fetch(endpoint, {
     method: "GET",
