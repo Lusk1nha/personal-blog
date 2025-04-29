@@ -9,6 +9,13 @@
   --color-button-default-text: var(--theme-button-default-text);
   --color-button-default-text-hover: var(--theme-button-default-text-hover);
 
+  /* Button Primary */
+  --color-button-primary-base: var(--theme-button-primary-base);
+  --color-button-primary-base-hover: var(--theme-button-primary-base-hover);
+  --color-button-primary-text: var(--theme-button-primary-text);
+  --color-button-primary-text-hover: var(--theme-button-primary-text-hover);
+  --color-button-primary-ring: var(--theme-button-primary-ring);
+
   /* Button Outline */
   --color-button-outline-base: var(--theme-button-outline-base);
   --color-button-outline-base-hover: var(--theme-button-outline-base-hover);
@@ -40,20 +47,33 @@
   --color-system-text-biglink-hover: var(--theme-text-biglink-hover);
   --color-system-text-biglink-active: var(--theme-text-biglink-active);
 
-  /* Title default */
+  /* Title Default */
   --color-system-title-default: var(--theme-system-title-default);
 
-  /* Separator default */
+  /* Separator Default */
   --color-system-separator-default: var(--theme-separator-default);
 
-  /* Skeleton default */
+  /* Skeleton Default */
   --color-skeleton-default: var(--theme-skeleton-default);
   --color-skeleton-default-hover: var(--theme-skeleton-default-hover);
 
-  /* Error Wrapper default */
+  /* Error Wrapper Default */
   --color-error-wrapper-default: var(--theme-error-wrapper-default);
   --color-error-wrapper-border: var(--theme-error-wrapper-border);
   --color-error-wrapper-text: var(--theme-error-wrapper-text);
+
+  /* Label Default */
+  --color-label-default: var(--theme-label-default);
+  --color-label-required: var(--theme-label-required);
+
+  /* Input Default */
+  --color-input-default-base: var(--theme-input-default-base);
+  --color-input-default-base-hover: var(--theme-input-default-base-hover);
+  --color-input-default-border: var(--theme-input-default-border);
+  --color-input-default-border-hover: var(--theme-input-default-border-hover);
+  --color-input-default-text: var(--theme-input-default-text);
+  --color-input-default-text-hover: var(--theme-input-default-text-hover);
+  --color-input-default-ring: var(--theme-input-default-ring);
 }
 
 @layer base {
@@ -65,6 +85,13 @@
     --theme-button-default-border-hover: var(--color-system-neutral-300);
     --theme-button-default-text: var(--color-system-neutral-700);
     --theme-button-default-text-hover: var(--color-system-neutral-900);
+
+    /* Button Primary */
+    --theme-button-primary-base: var(--color-system-blue-500);
+    --theme-button-primary-base-hover: var(--color-system-blue-700);
+    --theme-button-primary-text: var(--color-system-neutral-900);
+    --theme-button-primary-text-hover: var(--color-system-neutral-900);
+    --theme-button-primary-ring: var(--color-system-blue-800);
 
     /* Button Outline */
     --theme-button-outline-base: var(--color-system-neutral-100);
@@ -111,6 +138,19 @@
     --theme-error-wrapper-default: var(--color-system-red-600);
     --theme-error-wrapper-border: var(--color-system-red-600);
     --theme-error-wrapper-text: var(--color-system-neutral-0);
+
+    /* Label default */
+    --theme-label-default: var(--color-system-neutral-600);
+    --theme-label-required: var(--color-system-red-600);
+
+    /* Input Default */
+    --theme-input-default-base: var(--color-system-neutral-0);
+    --theme-input-default-base-hover: var(--color-system-neutral-200);
+    --theme-input-default-border: var(--color-system-neutral-300);
+    --theme-input-default-border-hover: var(--color-system-neutral-300);
+    --theme-input-default-text: var(--color-system-neutral-600);
+    --theme-input-default-text-hover: var(--color-system-neutral-700);
+    --theme-input-default-ring: var(--color-system-blue-800);
   }
 
   [data-theme="dark"] {
@@ -153,19 +193,32 @@
     --theme-text-biglink-hover: var(--color-system-neutral-0);
     --theme-text-biglink-active: var(--color-system-neutral-0);
 
-    /* Title default */
+    /* Title Default */
     --theme-system-title-default: var(--color-system-neutral-0);
 
-    /* Separator default */
+    /* Separator Default */
     --theme-separator-default: var(--color-system-neutral-700);
 
-    /* Skeleton default */
+    /* Skeleton Default */
     --theme-skeleton-default: var(--color-system-neutral-400);
     --theme-skeleton-default-hover: var(--color-system-neutral-300);
 
-    /* Error Wrapper default */
+    /* Error Wrapper Default */
     --theme-error-wrapper-default: var(--color-system-red-600);
     --theme-error-wrapper-border: var(--color-system-red-600);
     --theme-error-wrapper-text: var(--color-system-neutral-0);
+
+    /* Label Default */
+    --theme-label-default: var(--color-system-neutral-0);
+    --theme-label-required: var(--color-system-red-600);
+
+    /* Input Default */
+    --theme-input-default-base: var(--color-system-neutral-800);
+    --theme-input-default-base-hover: var(--color-system-neutral-700);
+    --theme-input-default-border: var(--color-system-neutral-600);
+    --theme-input-default-border-hover: var(--color-system-neutral-600);
+    --theme-input-default-text: var(--color-system-neutral-300);
+    --theme-input-default-text-hover: var(--color-system-neutral-200);
+    --theme-input-default-ring: var(--color-system-blue-700);
   }
 }

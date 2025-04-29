@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center focus:outline-none focus:ring-2 cursor-pointer",
+  "system-preset-6 inline-flex items-center justify-center focus:outline-none focus:ring-2 cursor-pointer",
   {
     variants: {
       size: {
@@ -15,6 +15,10 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-button-default-base hover:bg-button-default-base-hover text-button-default-text hover:text-button-default-text-hover border border-button-default-border hover:border-button-default-border-hover",
+        primary: `
+          bg-button-primary-base hover:bg-button-primary-base-hover text-button-primary-text
+          hover:text-button-primary-text-hover ring-button-primary-ring ring-offset-2 ring-offset-background
+        `,
         ghost:
           "bg-transparent text-button-ghost-text hover:text-button-ghost-text-hover",
         secondary:

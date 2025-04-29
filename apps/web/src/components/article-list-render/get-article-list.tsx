@@ -36,8 +36,8 @@ export function GetArticleList(props: Readonly<GetArticleListProps>) {
   return (
     <ArticleListRender
       articles={articles}
-      mustShowDescription
-      mustShowMore={false}
+      mustShowDescription={mustShowDescription}
+      mustShowMore={!mustGetAllArticles}
     />
   );
 }

@@ -11,6 +11,8 @@ interface ArticleHeaderTitleProps {
   className?: string;
   variant?: "default" | "right";
   direction?: SlideDirection;
+
+  mustAddUnderline?: boolean;
 }
 
 export function ArticleHeaderTitle(props: Readonly<ArticleHeaderTitleProps>) {
@@ -19,6 +21,7 @@ export function ArticleHeaderTitle(props: Readonly<ArticleHeaderTitleProps>) {
     className,
     variant = "default",
     direction = "left",
+    mustAddUnderline = true,
   } = props;
 
   return (
@@ -27,14 +30,16 @@ export function ArticleHeaderTitle(props: Readonly<ArticleHeaderTitleProps>) {
       direction={direction}
     >
       <Title>{children}</Title>
-      <Underline
-        className={cn(
-          " z-0 absolute",
-          variant === "default"
-            ? "w-full h-2 left-0 bottom-1 "
-            : "w-2/12 h-1 left-[105%] bottom-2.5 z-0"
-        )}
-      />
+      {mustAddUnderline && (
+        <Underline
+          className={cn(
+            " z-0 absolute",
+            variant === "default"
+              ? "w-full h-2 left-0 bottom-1 "
+              : "w-2/12 h-1 left-[105%] bottom-2.5 z-0"
+          )}
+        />
+      )}
     </SlideAnimate>
   );
 }

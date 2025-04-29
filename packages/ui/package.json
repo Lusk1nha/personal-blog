@@ -30,7 +30,9 @@
     "./separator.tsx": "./src/components/separator.tsx",
     "./skeleton.tsx": "./src/components/skeleton.tsx",
     "./spinner.tsx": "./src/components/spinner.tsx",
-    "./error-wrapper.tsx": "./src/components/error-wrapper.tsx"
+    "./error-wrapper.tsx": "./src/components/error-wrapper.tsx",
+    "./label.tsx": "./src/components/label.tsx",
+    "./input.tsx": "./src/components/input.tsx"
   },
   "devDependencies": {
     "@personal-blog/eslint-config": "workspace:*",
