@@ -32,7 +32,8 @@
     "./spinner.tsx": "./src/components/spinner.tsx",
     "./error-wrapper.tsx": "./src/components/error-wrapper.tsx",
     "./label.tsx": "./src/components/label.tsx",
-    "./input.tsx": "./src/components/input.tsx"
+    "./input.tsx": "./src/components/input.tsx",
+    "./badge.tsx": "./src/components/badge.tsx"
   },
   "devDependencies": {
     "@personal-blog/eslint-config": "workspace:*",

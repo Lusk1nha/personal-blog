@@ -10,9 +10,7 @@ interface ListAnimateWrapperProps extends HTMLMotionProps<"ul"> {
   className?: string;
 }
 
-const defaultAnimateProps: Omit<SpanAnimateWrapperProps, "children"> = {
-  transition: {},
-};
+const defaultAnimateProps: Omit<SpanAnimateWrapperProps, "children"> = {};
 
 export function FadeAnimate(props: Readonly<SpanAnimateWrapperProps>) {
   const { children, className, ...rest } = props;

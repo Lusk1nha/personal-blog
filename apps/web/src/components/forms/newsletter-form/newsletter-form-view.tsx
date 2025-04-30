@@ -18,7 +18,9 @@ export function NewsletterFormView(props: Readonly<NewsletterFormViewProps>) {
   const { onSubmit } = props;
 
   const form = useFormContext<NewsletterValidationType>();
-  const { handleSubmit } = form;
+  const { handleSubmit, formState } = form;
+
+  const { isSubmitSuccessful } = formState;
 
   return (
     <form className="flex flex-col gap-y-200" onSubmit={handleSubmit(onSubmit)}>
@@ -30,14 +32,24 @@ export function NewsletterFormView(props: Readonly<NewsletterFormViewProps>) {
             name="email"
             control={form.control}
             placeholder="email@example.com"
+            successfulMessage={
+              isSubmitSuccessful
+                ? "You’re subscribed! Check your inbox for updates."
+                : undefined
+            }
           />
         </fieldset>
       </SlideAnimate>
 
       <SlideAnimate>
         <div className="flex flex-col gap-y-100">
-          <div>
-            <Button className="h-12.5 px-300" type="submit" variant="primary">
+          <div className="flex">
+            <Button
+              disabled={formState.isSubmitting || formState.isSubmitSuccessful}
+              className="h-12.5 px-300"
+              type="submit"
+              variant="primary"
+            >
               Stay updated
             </Button>
           </div>

@@ -74,6 +74,12 @@
   --color-input-default-text: var(--theme-input-default-text);
   --color-input-default-text-hover: var(--theme-input-default-text-hover);
   --color-input-default-ring: var(--theme-input-default-ring);
+  --color-input-error-border: var(--theme-input-error-border);
+  --color-input-error-ring: var(--theme-input-error-ring);
+
+  /* Badge Error */
+  --color-badge-error: var(--theme-badge-error);
+  --color-success-error: var(--theme-success-error);
 }
 
 @layer base {
@@ -151,6 +157,12 @@
     --theme-input-default-text: var(--color-system-neutral-600);
     --theme-input-default-text-hover: var(--color-system-neutral-700);
     --theme-input-default-ring: var(--color-system-blue-800);
+    --theme-input-error-border: var(--color-system-red-600);
+    --theme-input-error-ring: var(--color-system-red-600);
+
+    /* Badge Error */
+    --theme-badge-error: var(--color-system-red-600);
+    --theme-success-error: var(--color-system-green-700);
   }
 
   [data-theme="dark"] {
@@ -220,5 +232,11 @@
     --theme-input-default-text: var(--color-system-neutral-300);
     --theme-input-default-text-hover: var(--color-system-neutral-200);
     --theme-input-default-ring: var(--color-system-blue-700);
+    --theme-input-error-border: var(--color-system-red-400);
+    --theme-input-error-ring: var(--color-system-red-400);
+
+    /* Badge Error */
+    --theme-badge-error: var(--color-system-red-400);
+    --theme-success-error: var(--color-system-green-500);
   }
 }

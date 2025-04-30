@@ -30,11 +30,11 @@ export function ThemeAction() {
       onClick={handleThemeChange}
       title="Toggle theme"
     >
-      <SpinAnimate transition={{ duration: 0.6 }} className="block dark:hidden">
+      <SpinAnimate transition={{ duration: 0.6 }} className="hidden dark:block">
         <Sun className="h-5 w-5" />
       </SpinAnimate>
 
-      <SpinAnimate transition={{ duration: 0.6 }} className="hidden dark:block">
+      <SpinAnimate transition={{ duration: 0.6 }} className="block dark:hidden">
         <Moon className="h-5 w-5" />
       </SpinAnimate>
 

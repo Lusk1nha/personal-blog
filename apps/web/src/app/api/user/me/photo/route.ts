@@ -2,10 +2,16 @@ import { getApiRequest } from "@/shared/common/request.common";
 import { APP_ENVIRONMENT } from "@/shared/constants";
 
 export async function GET(): Promise<Response> {
-  const endpoint =
-    APP_ENVIRONMENT === "development"
-      ? getApiRequest("/assets/images/image-avatar.jpg")
-      : "/assets/images/image-avatar.jpg";
+  const endpoint = getApiRequest("/assets/images/image-avatar.jpg");
+
+  if (APP_ENVIRONMENT === "production") {
+    return new Response("/assets/images/image-avatar.jpg", {
+      status: 403,
+      headers: {
+        "Content-Type": "text/plain",
+      },
+    });
+  }
 
   const response = await fetch(endpoint, {
     method: "GET",
