@@ -5,10 +5,10 @@ import { AboutPageInfo } from "./_components/page-info";
 
 export default function AboutPage() {
   return (
-    <React.Fragment>
+    <div className="flex flex-col gap-y-300 pb-400">
       <AboutPageInfo />
       <AboutPageContent />
       <FollowMe />
-    </React.Fragment>
+    </div>
   );
 }

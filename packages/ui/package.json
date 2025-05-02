@@ -33,7 +33,9 @@
     "./error-wrapper.tsx": "./src/components/error-wrapper.tsx",
     "./label.tsx": "./src/components/label.tsx",
     "./input.tsx": "./src/components/input.tsx",
-    "./badge.tsx": "./src/components/badge.tsx"
+    "./badge.tsx": "./src/components/badge.tsx",
+    "./strong.tsx": "./src/components/strong.tsx",
+    "./blockquote.tsx": "./src/components/blockquote.tsx"
   },
   "devDependencies": {
     "@personal-blog/eslint-config": "workspace:*",

@@ -80,6 +80,9 @@
   /* Badge Error */
   --color-badge-error: var(--theme-badge-error);
   --color-success-error: var(--theme-success-error);
+
+  /* BlockQuote Default */
+  --color-blockquote-border-default: var(--theme-blockquote-border-default);
 }
 
 @layer base {
@@ -163,6 +166,9 @@
     /* Badge Error */
     --theme-badge-error: var(--color-system-red-600);
     --theme-success-error: var(--color-system-green-700);
+
+    /* BlockQuote Default */
+    --theme-blockquote-border-default: var(--color-system-neutral-400);
   }
 
   [data-theme="dark"] {
@@ -238,5 +244,8 @@
     /* Badge Error */
     --theme-badge-error: var(--color-system-red-400);
     --theme-success-error: var(--color-system-green-500);
+
+    /* BlockQuote Default */
+    --theme-blockquote-border-default: var(--color-system-neutral-700);
   }
 }

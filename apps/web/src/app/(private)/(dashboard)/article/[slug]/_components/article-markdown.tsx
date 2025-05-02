@@ -13,7 +13,7 @@ export function ArticleMarkdown(props: Readonly<ArticleMarkdownProps>) {
 
   return (
     <FadeAnimate className={className}>
-      <MarkdownGenerator content={content} />
+      <MarkdownGenerator>{content}</MarkdownGenerator>
     </FadeAnimate>
   );
 }

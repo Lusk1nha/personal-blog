@@ -10,6 +10,11 @@ interface ListAnimateWrapperProps extends HTMLMotionProps<"ul"> {
   className?: string;
 }
 
+interface NumberedListAnimateWrapperProps extends HTMLMotionProps<"ol"> {
+  children: React.ReactNode;
+  className?: string;
+}
+
 const defaultAnimateProps: Omit<SpanAnimateWrapperProps, "children"> = {};
 
 export function FadeAnimate(props: Readonly<SpanAnimateWrapperProps>) {
@@ -67,6 +72,31 @@ export function SpinAnimate(props: Readonly<SpanAnimateWrapperProps>) {
     >
       {children}
     </motion.span>
+  );
+}
+
+export function NumberedListFadeInAnimate(
+  props: Readonly<NumberedListAnimateWrapperProps>
+) {
+  const { children, className, ...rest } = props;
+  return (
+    <motion.ol
+      data-animation="list-fade-in"
+      variants={{
+        visible: {
+          transition: {
+            delayChildren: 0.2,
+            staggerChildren: 0.05,
+          },
+        },
+      }}
+      initial="hidden"
+      animate="visible"
+      className={className}
+      {...rest}
+    >
+      {children}
+    </motion.ol>
   );
 }
 

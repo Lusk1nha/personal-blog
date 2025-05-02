@@ -17,7 +17,7 @@ export function ArticleHeader(props: Readonly<ArticleHeaderProps>) {
   return (
     <div className="flex flex-col gap-y-150">
       <SlideAnimate direction="up">
-        <Title size="xl">{article.title}</Title>
+        <Title size="3xl">{article.title}</Title>
       </SlideAnimate>
       <FadeAnimate>
         <Text size="italic">Published {article.formattedPublishedAt}</Text>

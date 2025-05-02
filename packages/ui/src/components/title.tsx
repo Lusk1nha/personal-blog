@@ -12,7 +12,9 @@ const titleVariants = cva("antialiased", {
       sm: "system-preset-5",
       default: "system-preset-2",
       lg: "system-preset-4",
-      xl: "system-preset-1",
+      xl: "system-preset-3",
+      "2xl": "system-preset-2",
+      "3xl": "system-preset-1",
     },
   },
   defaultVariants: {
