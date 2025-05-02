@@ -28,7 +28,7 @@ const Spinner = forwardRef<HTMLSpanElement, SpinnerProps>((props, ref) => {
   const { children, variant, size, className, ...rest } = props;
 
   return (
-    <span className="flex" {...rest} ref={ref}>
+    <span data-component="Spinner" className="flex" {...rest} ref={ref}>
       <Loader2
         className={cn(
           spinnerVariants({

@@ -27,6 +27,7 @@ const Skeleton = forwardRef<HTMLDivElement, SkeletonProps>((props, ref) => {
   const { className, variant, size, ...rest } = props;
   return (
     <div
+      data-component="Skeleton"
       ref={ref}
       className={cn(
         skeletonVariants({

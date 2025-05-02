@@ -45,6 +45,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 
   return (
     <button
+      data-component="Button"
       ref={ref}
       className={cn(
         buttonVariants({

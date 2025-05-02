@@ -32,7 +32,10 @@ export interface AvatarProps
 const Avatar = forwardRef<HTMLImageElement, AvatarProps>((props, ref) => {
   const { className, variant, size, ...rest } = props;
   return (
-    <div className={cn(avatarVariants({ variant, size, className }))}>
+    <div
+      data-component="Avatar"
+      className={cn(avatarVariants({ variant, size, className }))}
+    >
       <img className="w-full h-full object-cover" ref={ref} {...rest} />
     </div>
   );

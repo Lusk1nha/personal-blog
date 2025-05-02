@@ -38,6 +38,7 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => {
   return (
     <span className="flex items-center gap-x-1">
       <label
+        data-component="Label"
         ref={ref}
         className={cn(
           labelVariants({

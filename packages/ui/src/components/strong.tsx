@@ -27,6 +27,7 @@ const Strong = forwardRef<HTMLSpanElement, StrongProps>((props, ref) => {
 
   return (
     <strong
+      data-component="Strong"
       ref={ref}
       className={strongVariants({
         variant,

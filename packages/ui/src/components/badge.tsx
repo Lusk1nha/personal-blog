@@ -34,6 +34,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>((props, ref) => {
 
   return (
     <span
+      data-component="Badge"
       ref={ref}
       className={cn(
         badgeVariants({

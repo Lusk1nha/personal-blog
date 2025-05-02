@@ -39,6 +39,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
 
   return (
     <input
+      data-component="Input"
       ref={ref}
       className={cn(
         inputVariants({

@@ -83,6 +83,25 @@
 
   /* BlockQuote Default */
   --color-blockquote-border-default: var(--theme-blockquote-border-default);
+
+  /* Callout Quote */
+  --color-callout-title: var(--theme-callout-title);
+  --color-callout-text: var(--theme-callout-text);
+
+  --color-callout-background-tip: var(--theme-callout-background-tip);
+  --color-callout-border-tip: var(--theme-callout-border-tip);
+  --color-callout-text-tip: var(--theme-callout-text-tip);
+
+  --color-callout-background-warning: var(--theme-callout-background-warning);
+  --color-callout-border-warning: var(--theme-callout-border-warning);
+  --color-callout-text-warning: var(--theme-callout-text-warning);
+
+  --color-callout-background-info: var(--theme-callout-background-info);
+  --color-callout-border-info: var(--theme-callout-border-info);
+  --color-callout-text-info: var(--theme-callout-text-info);
+
+  /* Table Default */
+  --color-system-table-border: var(--theme-system-table-border);
 }
 
 @layer base {
@@ -169,6 +188,25 @@
 
     /* BlockQuote Default */
     --theme-blockquote-border-default: var(--color-system-neutral-400);
+
+    /* Callout Quote */
+    --theme-callout-title: var(--color-system-neutral-700);
+    --theme-callout-text: var(--color-system-neutral-600);
+
+    --theme-callout-background-tip: var(--color-system-green-200);
+    --theme-callout-border-tip: var(--color-system-green-500);
+    --theme-callout-text-tip: var(--color-system-green-700);
+
+    --theme-callout-background-warning: var(--color-system-yellow-200);
+    --theme-callout-border-warning: var(--color-system-yellow-500);
+    --theme-callout-text-warning: var(--color-system-yellow-700);
+
+    --theme-callout-background-info: var(--color-system-blue-200);
+    --theme-callout-border-info: var(--color-system-blue-500);
+    --theme-callout-text-info: var(--color-system-blue-700);
+
+    /* Table Default */
+    --theme-system-table-border: var(--color-system-neutral-200);
   }
 
   [data-theme="dark"] {
@@ -247,5 +285,24 @@
 
     /* BlockQuote Default */
     --theme-blockquote-border-default: var(--color-system-neutral-700);
+
+    /* Callout Quote */
+    --theme-callout-title: var(--color-system-neutral-0);
+    --theme-callout-text: var(--color-system-neutral-400);
+
+    --theme-callout-background-tip: var(--color-system-green-900);
+    --theme-callout-border-tip: var(--color-system-green-700);
+    --theme-callout-text-tip: var(--color-system-green-500);
+
+    --theme-callout-background-warning: var(--color-system-yellow-900);
+    --theme-callout-border-warning: var(--color-system-yellow-700);
+    --theme-callout-text-warning: var(--color-system-yellow-500);
+
+    --theme-callout-background-info: var(--color-system-blue-900);
+    --theme-callout-border-info: var(--color-system-blue-700);
+    --theme-callout-text-info: var(--color-system-blue-500);
+
+    /* Table Default */
+    --theme-system-table-border: var(--color-system-neutral-700);
   }
 }

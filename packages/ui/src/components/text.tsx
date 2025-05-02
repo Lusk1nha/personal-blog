@@ -34,6 +34,7 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
 
   return (
     <p
+      data-component="Text"
       ref={ref}
       className={cn(
         textVariants({

@@ -24,7 +24,6 @@
     "./styles.css": "./dist/styles.css",
     "./avatar.tsx": "./src/components/avatar.tsx",
     "./button.tsx": "./src/components/button.tsx",
-    "./anchor.tsx": "./src/components/anchor.tsx",
     "./text.tsx": "./src/components/text.tsx",
     "./title.tsx": "./src/components/title.tsx",
     "./separator.tsx": "./src/components/separator.tsx",
@@ -35,7 +34,9 @@
     "./input.tsx": "./src/components/input.tsx",
     "./badge.tsx": "./src/components/badge.tsx",
     "./strong.tsx": "./src/components/strong.tsx",
-    "./blockquote.tsx": "./src/components/blockquote.tsx"
+    "./blockquote.tsx": "./src/components/blockquote.tsx",
+    "./callout.tsx": "./src/components/callout.tsx",
+    "./table.tsx": "./src/components/table.tsx"
   },
   "devDependencies": {
     "@personal-blog/eslint-config": "workspace:*",

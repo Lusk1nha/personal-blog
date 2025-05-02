@@ -2,6 +2,8 @@
 @import "@personal-blog/design-system/theme.css";
 @import "./theme.css";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @layer utilities {
   /* Preset 1 */
   .system-preset-1 {

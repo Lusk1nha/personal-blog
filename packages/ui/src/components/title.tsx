@@ -35,6 +35,7 @@ const Title = forwardRef<HTMLHeadingElement, TitleProps>((props, ref) => {
 
   return (
     <h1
+      data-component="Title"
       ref={ref}
       className={cn(
         titleVariants({

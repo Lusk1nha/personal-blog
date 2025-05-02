@@ -6,7 +6,7 @@ export async function GET(): Promise<Response> {
 
   if (APP_ENVIRONMENT === "production") {
     return new Response("/assets/images/image-avatar.jpg", {
-      status: 403,
+      status: 200,
       headers: {
         "Content-Type": "text/plain",
       },

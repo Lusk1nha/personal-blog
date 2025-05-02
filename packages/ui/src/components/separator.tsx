@@ -27,6 +27,7 @@ const Separator = forwardRef<HTMLHRElement, SeparatorProps>((props, ref) => {
   const { className, variant, size, ...rest } = props;
   return (
     <hr
+      data-component="Separator"
       ref={ref}
       className={cn(
         separatorVariants({

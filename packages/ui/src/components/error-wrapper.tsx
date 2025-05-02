@@ -73,6 +73,7 @@ const ErrorDefaultWrapper = forwardRef<HTMLDivElement, ErrorWrapperProps>(
 
     return (
       <div
+        data-component="ErrorDefaultWrapper"
         role="alert"
         className={cn(
           errorWrapperVariants({
@@ -140,6 +141,7 @@ const ErrorSmallWrapper = forwardRef<HTMLDivElement, ErrorWrapperProps>(
 
     return (
       <div
+        data-component="ErrorSmallWrapper"
         role="alert"
         className={cn(
           errorWrapperVariants({

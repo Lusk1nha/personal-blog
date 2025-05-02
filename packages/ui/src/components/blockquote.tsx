@@ -28,6 +28,7 @@ const BlockQuote = forwardRef<HTMLQuoteElement, BlockQuoteProps>(
 
     return (
       <blockquote
+        data-component="BlockQuote"
         ref={ref}
         className={blockquoteVariants({
           variant,

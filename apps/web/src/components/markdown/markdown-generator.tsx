@@ -4,20 +4,17 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import SyntaxHighlighter from "react-syntax-highlighter";
+import Image from "next/image";
 
 import { Text } from "@personal-blog/ui/text.tsx";
-import {
-  ItemFadeInAnimate,
-  ListFadeInAnimate,
-  NumberedListFadeInAnimate,
-} from "../utilities/animation";
 
 import { Title } from "@personal-blog/ui/title.tsx";
 import { Separator } from "@personal-blog/ui/separator.tsx";
 import { Strong } from "@personal-blog/ui/strong.tsx";
-import { BlockQuote } from "@personal-blog/ui/blockquote.tsx";
-import Image from "next/image";
+import { Table, TableCell } from "@personal-blog/ui/table.tsx";
+
 import { cn } from "@personal-blog/utils/cn";
+import { HandleBlockquote } from "./handle-blockquote";
 
 interface MarkdownGeneratorProps {
   children: string;
@@ -27,28 +24,28 @@ export function MarkdownGenerator(props: Readonly<MarkdownGeneratorProps>) {
   const { children = "" } = props;
 
   return (
-    <ListFadeInAnimate className="flex flex-col gap-y-300">
+    <div className="flex flex-col gap-y-300">
       <ReactMarkdown
         components={{
           ol: ({ node, ...props }) => {
             return (
-              <NumberedListFadeInAnimate className="flex flex-col gap-y-150 !list-decimal pl-8">
+              <ol className="flex flex-col gap-y-150 !list-decimal pl-8">
                 {props.children}
-              </NumberedListFadeInAnimate>
+              </ol>
             );
           },
           ul: ({ node, ...props }) => {
             return (
-              <ListFadeInAnimate className="flex flex-col gap-y-150 !list-disc pl-5">
+              <ul className="flex flex-col gap-y-150 !list-disc pl-5">
                 {props.children}
-              </ListFadeInAnimate>
+              </ul>
             );
           },
           li: ({ node, ...props }) => {
             return (
-              <ItemFadeInAnimate>
+              <li>
                 <Text size="lg">{props.children}</Text>
-              </ItemFadeInAnimate>
+              </li>
             );
           },
           p: ({ node, ...props }) => {
@@ -79,10 +76,11 @@ export function MarkdownGenerator(props: Readonly<MarkdownGeneratorProps>) {
             return <Title size="xs">{props.children}</Title>;
           },
           blockquote: ({ node, ...props }) => {
+            const { children, className } = props;
             return (
-              <ItemFadeInAnimate className="flex flex-col gap-y-150">
-                <BlockQuote>{props.children}</BlockQuote>
-              </ItemFadeInAnimate>
+              <HandleBlockquote className={className}>
+                {children}
+              </HandleBlockquote>
             );
           },
           img: ({ node, ...props }) => {
@@ -95,7 +93,7 @@ export function MarkdownGenerator(props: Readonly<MarkdownGeneratorProps>) {
                 width={0}
                 height={0}
                 sizes="100vw"
-                style={{ width: "100%", height: "auto" }} // optional
+                style={{ width: "100%", height: "auto" }}
               />
             );
           },
@@ -113,33 +111,39 @@ export function MarkdownGenerator(props: Readonly<MarkdownGeneratorProps>) {
                 }}
               />
             ) : (
-              <code
-                {...rest}
-                className={cn(
-                  className,
-                  "system-preset-9 bg-[#EFEDEB] rounded-12 px-1"
-                )}
-              >
+              <code {...rest} className={cn(className, "system-preset-9")}>
                 {children}
               </code>
+            );
+          },
+          table: ({ node, ...props }) => {
+            return <Table className="w-full">{props.children}</Table>;
+          },
+          th: ({ node, ...props }) => {
+            return (
+              <TableCell className="border text-left text-table-head-text p-2">
+                <Title size="xs">{props.children}</Title>
+              </TableCell>
+            );
+          },
+          td: ({ node, ...props }) => {
+            return (
+              <TableCell className="border text-left text-table-head-text p-2">
+                <Text>{props.children}</Text>
+              </TableCell>
             );
           },
           hr: () => {
             return <Separator />;
           },
           br: () => {
-            return (
-              <React.Fragment>
-                <br />
-                <br />
-              </React.Fragment>
-            );
+            return <br />;
           },
         }}
         remarkPlugins={[remarkGfm]}
       >
         {children}
       </ReactMarkdown>
-    </ListFadeInAnimate>
+    </div>
   );
 }
