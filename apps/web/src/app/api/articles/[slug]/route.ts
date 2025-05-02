@@ -1,4 +1,3 @@
-import { ArticleData } from "@/shared/entities/article.entity";
 import { SYSTEM_ARTICLES } from "@/shared/mocks";
 
 import { NextRequest, NextResponse } from "next/server";
@@ -9,13 +8,6 @@ interface GetArticleListParams {
 
 interface GetArticleRequest {
   params: Promise<GetArticleListParams>;
-}
-
-export async function getArticleBySlug(
-  slug: string
-): Promise<ArticleData | undefined> {
-  const article = SYSTEM_ARTICLES.find((article) => article.slug === slug);
-  return article;
 }
 
 export async function GET(
@@ -33,7 +25,7 @@ export async function GET(
     });
   }
 
-  const article = await getArticleBySlug(slug);
+  const article = SYSTEM_ARTICLES.find((article) => article.slug === slug);
 
   if (!article) {
     return new NextResponse(JSON.stringify({ error: "Article not found" }), {
