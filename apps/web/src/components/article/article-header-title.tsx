@@ -33,7 +33,7 @@ export function ArticleHeaderTitle(props: Readonly<ArticleHeaderTitleProps>) {
       {mustAddUnderline && (
         <Underline
           className={cn(
-            " z-0 absolute",
+            "z-0 absolute",
             variant === "default"
               ? "w-full h-2 left-0 bottom-1 "
               : "w-2/12 h-1 left-[105%] bottom-2.5 z-0"

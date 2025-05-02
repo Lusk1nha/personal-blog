@@ -1,22 +1,15 @@
+import React from "react";
+
 import { Separator } from "@personal-blog/ui/separator.tsx";
 import { BlogPageInfo } from "./_components/page-info";
 import { MyArticleList } from "./_components/my-articles-list";
-import { PageWrapper } from "../_components/page-wrapper";
-import { MadeWith } from "../_components/made-with/made-with";
 
 export default function BlogPage() {
   return (
-    <PageWrapper>
-      <div className="flex flex-col gap-y-300">
-        <BlogPageInfo />
-        <Separator />
-        <MyArticleList />
-      </div>
-
-      <div className="flex flex-col gap-y-300">
-        <Separator />
-        <MadeWith />
-      </div>
-    </PageWrapper>
+    <React.Fragment>
+      <BlogPageInfo />
+      <Separator />
+      <MyArticleList />
+    </React.Fragment>
   );
 }

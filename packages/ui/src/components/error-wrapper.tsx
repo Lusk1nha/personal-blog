@@ -1,6 +1,6 @@
 import { cn } from "@personal-blog/utils/cn";
 import { cva, VariantProps } from "class-variance-authority";
-import { AlertTriangle, Info, RefreshCcw } from "lucide-react";
+import { AlertTriangle, RefreshCcw } from "lucide-react";
 import { forwardRef } from "react";
 import { Button, buttonVariants } from "./button";
 import { Text } from "./text";
@@ -11,6 +11,7 @@ const errorWrapperVariants = cva("transition-all", {
     size: {
       default: "p-150 rounded-8",
       sm: "px-4 py-2 rounded-8",
+      icon: "p-2 rounded-8",
     },
     type: {
       error:
@@ -37,6 +38,27 @@ export interface ErrorWrapperProps
 }
 
 const ErrorWrapper = forwardRef<HTMLDivElement, ErrorWrapperProps>(
+  (props, ref) => {
+    const {
+      className,
+      size,
+      title,
+      description,
+      onRetry,
+      icon,
+      type,
+      ...rest
+    } = props;
+
+    if (size === "icon") {
+      return <ErrorSmallWrapper {...props} ref={ref} />;
+    }
+
+    return <ErrorDefaultWrapper {...props} ref={ref} />;
+  }
+);
+
+const ErrorDefaultWrapper = forwardRef<HTMLDivElement, ErrorWrapperProps>(
   (props, ref) => {
     const {
       className,
@@ -98,6 +120,49 @@ const ErrorWrapper = forwardRef<HTMLDivElement, ErrorWrapperProps>(
             )}
           </div>
         </div>
+      </div>
+    );
+  }
+);
+
+const ErrorSmallWrapper = forwardRef<HTMLDivElement, ErrorWrapperProps>(
+  (props, ref) => {
+    const {
+      className,
+      size,
+      title,
+      description,
+      onRetry,
+      icon,
+      type,
+      ...rest
+    } = props;
+
+    return (
+      <div
+        role="alert"
+        className={cn(
+          errorWrapperVariants({
+            type,
+            size,
+            className,
+          }),
+          "flex items-center gap-2"
+        )}
+        ref={ref}
+        {...rest}
+      >
+        <span
+          className={cn(
+            buttonVariants({
+              variant: "ghost",
+              size: "fit",
+            }),
+            "cursor-default"
+          )}
+        >
+          {icon || <AlertTriangle className="w-5 h-5" />}
+        </span>
       </div>
     );
   }

@@ -2,7 +2,7 @@
 
 import { ArticleHeaderTitle } from "@/components/article/article-header-title";
 import { ArticleText } from "@/components/article/article-text";
-import { SocialMedias } from "@/components/article/social-medias";
+import { SocialMediasRender } from "@/components/social-medias/social-medias-render";
 import { AboutMeData, AboutMeEntity } from "@/shared/entities/about-me-entity";
 import React from "react";
 
@@ -17,11 +17,11 @@ export function AboutMeHomeContent(props: Readonly<AboutMeHomeContentProps>) {
 
   return (
     <React.Fragment>
-      <ArticleHeaderTitle className="w-44 sm:w-fit" direction="up">{aboutMe.title}</ArticleHeaderTitle>
-
+      <ArticleHeaderTitle className="w-44 sm:w-fit" direction="up">
+        {aboutMe.title}
+      </ArticleHeaderTitle>
       <ArticleText>{aboutMe.description}</ArticleText>
-
-      <SocialMedias medias={aboutMe.socialMedias} />
+      <SocialMediasRender medias={aboutMe.socialMedias} />
     </React.Fragment>
   );
 }

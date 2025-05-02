@@ -17,10 +17,14 @@ export class SocialMediaEntity {
   private _url: string;
 
   constructor(data: SocialMediaData) {
-    this._validateName(data.name);
+    this._validateSocialMedia(data);
 
     this._name = data.name;
     this._url = data.url;
+  }
+
+  private _validateSocialMedia(data: SocialMediaData) {
+    this._validateName(data.name);
   }
 
   private _validateName(name: string) {

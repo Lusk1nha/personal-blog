@@ -1,4 +1,4 @@
-import { SYSTEM_ARTICLES } from "@/shared/constants";
+import { SYSTEM_ARTICLES } from "@/shared/mocks";
 import { NextResponse } from "next/server";
 
 export async function GET() {

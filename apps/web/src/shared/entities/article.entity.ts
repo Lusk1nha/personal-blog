@@ -51,6 +51,14 @@ export class ArticleEntity {
     return this._publishedAt;
   }
 
+  get formattedPublishedAt(): string {
+    return this._publishedAt.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  }
+
   get description(): string | null {
     return this._description;
   }

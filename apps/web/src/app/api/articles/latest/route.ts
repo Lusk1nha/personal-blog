@@ -1,10 +1,14 @@
-import { SYSTEM_ARTICLES } from "@/shared/constants";
-import { NextResponse } from "next/server";
+import { SYSTEM_ARTICLES } from "@/shared/mocks";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const quantity = request.nextUrl.searchParams.get("quantity") ?? 5;
+
   const articles = SYSTEM_ARTICLES;
 
-  return new NextResponse(JSON.stringify(articles), {
+  const slicedArticles = articles.slice(0, Number(quantity));
+
+  return new NextResponse(JSON.stringify(slicedArticles), {
     status: 200,
     headers: {
       "Content-Type": "application/json",

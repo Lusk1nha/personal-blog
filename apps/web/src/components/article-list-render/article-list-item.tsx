@@ -23,18 +23,11 @@ export function ArticleListItem(props: Readonly<ArticleListItemProps>) {
       <Link
         className="hover:opacity-70 focus:outline-none focus:ring-2 ring-system-blue-800 cursor-pointer rounded-8"
         href={path}
-        target="_blank"
       >
         <Title size="sm">{article.title}</Title>
       </Link>
 
-      <Text size="italic">
-        {new Date(article.publishedAt).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </Text>
+      <Text size="italic">{article.formattedPublishedAt}</Text>
 
       {mustShowDescription && article?.description && (
         <Text size="lg">{article.description}</Text>
