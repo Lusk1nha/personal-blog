@@ -89,4 +89,118 @@ const FrontendMentorIcon = forwardRef<SVGSVGElement, SVGElementProps>(
 
 FrontendMentorIcon.displayName = "FrontendMentorIcon";
 
-export { LinkedInIcon, GitHubIcon, TwitterIcon, FrontendMentorIcon };
+const PatternLight = forwardRef<SVGSVGElement, SVGElementProps>(
+  (props, ref) => {
+    return (
+      <svg
+        width="212"
+        height="423"
+        viewBox="0 0 212 423"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        ref={ref}
+        {...props}
+      >
+        <g clipPath="url(#clip0_2041_1555)">
+          <mask
+            id="mask0_2041_1555"
+            style={{
+              maskType: "luminance",
+            }}
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="423"
+            height="423"
+          >
+            <path d="M423 0H0V423H423V0Z" fill="white" />
+          </mask>
+          <g mask="url(#mask0_2041_1555)">
+            <path
+              d="M303.718 330.074L211.499 422.293L119.281 330.074L211.499 237.855L303.718 330.074ZM185.144 211.499L92.9248 303.718L0.707031 211.499L92.9248 119.281L185.144 211.499ZM422.293 211.499L330.074 303.718L237.855 211.499L330.074 119.281L422.293 211.499ZM303.718 92.9248L211.499 185.144L119.281 92.9248L211.499 0.707031L303.718 92.9248Z"
+              stroke="url(#paint0_linear_2041_1555)"
+            />
+          </g>
+        </g>
+        <defs>
+          <linearGradient
+            id="paint0_linear_2041_1555"
+            x1="211.5"
+            y1="0"
+            x2="211.5"
+            y2="423"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#E5E3E1" />
+            <stop offset="1" stopColor="#EFEDEB" stopOpacity="0.2" />
+          </linearGradient>
+          <clipPath id="clip0_2041_1555">
+            <rect width="423" height="423" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    );
+  }
+);
+
+PatternLight.displayName = "PatternLight";
+
+const PatternDark = forwardRef<SVGSVGElement, SVGElementProps>((props, ref) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="423"
+      height="423"
+      fill="none"
+      viewBox="0 0 423 423"
+      ref={ref}
+      {...props}
+    >
+      <g clipPath="url(#a)">
+        <mask
+          id="b"
+          width="423"
+          height="423"
+          x="0"
+          y="0"
+          maskUnits="userSpaceOnUse"
+        >
+          <path fill="#fff" d="M423 0H0v423h423V0Z" />
+        </mask>
+        <g mask="url(#b)">
+          <path
+            stroke="url(#c)"
+            d="M330.075 303.718 237.856 211.5l92.219-92.218 92.218 92.218-92.218 92.218Zm-237.15 0L.707 211.5l92.219-92.218 92.218 92.218-92.219 92.218ZM211.5 422.293l-92.218-92.218 92.218-92.219 92.218 92.219-92.218 92.218Zm0-237.149-92.218-92.219L211.5.707l92.218 92.219-92.218 92.218Z"
+          />
+        </g>
+      </g>
+      <defs>
+        <linearGradient
+          id="c"
+          x1="289"
+          x2="226.5"
+          y1="37.5"
+          y2="383"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#34302D" />
+          <stop offset="1" stopColor="#292725" stopOpacity=".2" />
+        </linearGradient>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 0h423v423H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+});
+
+PatternDark.displayName = "PatternDark";
+
+export {
+  LinkedInIcon,
+  GitHubIcon,
+  TwitterIcon,
+  FrontendMentorIcon,
+  PatternLight,
+  PatternDark,
+};
