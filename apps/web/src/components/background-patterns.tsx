@@ -4,11 +4,11 @@ import { PatternDark, PatternLight } from "@personal-blog/design-system/icons";
 export function BackgroundPatterns() {
   return (
     <React.Fragment>
-      <div className="fixed top-1/2 -left-52 transform -translate-y-1/2">
+      <div className="absolute top-1/2 -left-52 transform -translate-y-1/2">
         <Pattern />
       </div>
 
-      <div className="fixed top-0 -right-52">
+      <div className="absolute top-0 -right-52">
         <Pattern />
       </div>
     </React.Fragment>

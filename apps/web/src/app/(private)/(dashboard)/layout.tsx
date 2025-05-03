@@ -12,8 +12,9 @@ export default function DashboardLayout(props: Readonly<NextArtefactProps>) {
       data-testid="dashboard-layout"
       className="flex justify-center w-full h-screen px-8 lg:px-16 pt-5"
     >
-      <div className="w-full max-w-[640px] h-full flex flex-col">
+      <div className="bg-background w-full max-w-[640px] h-full flex flex-col z-10">
         <Navbar />
+
         <PageWrapper className="h-full border-x border-border mx-1 sm:mx-2 overflow-x-hidden -mt-0.5">
           <div className="flex flex-col gap-y-300">{children}</div>
 

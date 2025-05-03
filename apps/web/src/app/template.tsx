@@ -8,7 +8,7 @@ export default function RootTemplate(props: Readonly<NextArtefactProps>) {
   return (
     <div
       id="root-template-container"
-      className="bg-background w-full overflow-hidden"
+      className="bg-background w-full overflow-hidden relative"
     >
       <FontProvider>{children}</FontProvider>
       <BackgroundPatterns />
